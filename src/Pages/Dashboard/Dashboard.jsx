@@ -1,11 +1,10 @@
 import React from 'react';
+import DashNav from './Components/DashNav';
 
 const Dashboard = () => {
   return (
     <div>
-      <h1>
-        dashboard
-      </h1>
+      <DashNav/>
     </div>
   );
 };
