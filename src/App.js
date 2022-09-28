@@ -1,13 +1,12 @@
-import logo from './logo.svg';
-// import './App.css';
-import Dashboard from './Pages/Dashboard/Dashboard';
+import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import { Tracker } from './Pages/Tracker/Tracker';
 
 function App() {
   return (
-    <div className="App">
-      <Dashboard/>
-
-    </div>
+    <Routes>
+      <Route path='/tracker' element={<Tracker />} />
+    </Routes>
   );
 }
 
