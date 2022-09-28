@@ -1,0 +1,397 @@
+.features{
+  
+    /* height: 500px; */
+    width: 100%;
+    margin-top: 50px;
+}
+.features1{
+    width: 70%;
+    height: 400px;
+    margin: auto;
+  
+}
+.features1  {
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.pro h1{
+    font-size: 40px;
+    margin: 10px;
+}
+.timekeep h1{
+    font-size: 30px;
+    margin: 30px;
+}
+.timekeep > div{
+    
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  
+}
+.div1{
+    font-size: 20px;
+    border:0.1rem solid gray;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 5px;
+    
+}.div1:hover{
+    background-color: rgb(97, 97, 163);
+    color: white;
+}
+
+
+  
+  /*----img---------*/
+
+  .timertrack{
+
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+.timertrack  img{
+    margin-left: 10%;
+    height: 1100px;
+}
+.timertrack h1{
+    font-size: 40px;
+}
+.timertrack p{
+    font-size: 30px;
+}
+
+.timersheet{
+
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+    margin-top: 300px;
+    margin-bottom: 300px;
+  }
+.timersheet  img{
+    margin-left: 10%;
+    height: 1100px;
+}
+.timersheet h1{
+    font-size: 40px;
+}
+.timersheet p{
+    font-size: 30px;
+}
+
+.kiosk{
+
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+    margin-top: 100px;
+    margin-bottom: 350px;
+  }
+.kiosk  img{
+    margin-left: 10%;
+    height: 1100px;
+}
+.kiosk h1{
+    font-size: 40px;
+}
+.kiosk p{
+    font-size: 30px;
+}
+
+.calendar{
+
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+    margin-top: 100px;
+    margin-bottom: 300px;
+  }
+.calendar  img{
+    margin-left: 10%;
+    height: 1100px;
+}
+.calendar h1{
+    font-size: 40px;
+}
+.calendar p{
+    font-size: 30px;
+}
+
+.app{
+
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+    margin-top: 100px;
+  }
+.app  img{
+    margin-left: 10%;
+    height: 1100px;
+}
+.app h1{
+    font-size: 40px;
+}
+.app p{
+    font-size: 30px;
+}
+
+.integration{
+
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+    margin-top: 100px;
+  }
+.integration  img{
+    border: 1px solid black;
+    margin-left: 20%;
+    cursor: pointer;
+    width: 70%;
+    margin-top: 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.integration h1{
+    font-size: 40px;
+}
+.integration p{
+    font-size: 30px;
+}
+
+.dash{
+
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+    margin-top: 400px;
+    margin-bottom: 500px;
+  }
+.dash  img{
+    margin-left: 15%;
+    height: 1200px;
+    width: 80%;
+}
+.dash h1{
+    font-size: 40px;
+}
+.dash p{
+    font-size: 30px;
+}
+
+
+
+.repot1{
+
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+    margin-top: 250px;
+  }
+.repot1  img{
+    margin-left: 15%;
+    height: 1100px;
+    width: 80%;
+}
+.repot1 h1{
+    font-size: 40px;
+}
+.repot1 p{
+    font-size: 30px;
+}
+
+.activity{
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+    margin-top: 80px;
+  }
+.activity  img{
+    margin-left: 10%;
+    height: 1100px;
+    width: 90%;
+}
+.activity h1{
+    font-size: 40px;
+}
+.activity p{
+    font-size: 30px;
+}
+
+.project{
+
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+    margin-top: 80px;
+  }
+.project  img{
+    margin-left: 10%;
+    height: 1100px;
+    width: 90%;
+}
+.project h1{
+    font-size: 40px;
+}
+.project p{
+    font-size: 30px;
+}
+
+.team{
+
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+    margin-top: 80px;
+  }
+.team  img{
+    margin-left: 10%;
+    height: 1100px;
+    width: 90%;
+}
+.team h1{
+    font-size: 40px;
+}
+.team p{
+    font-size: 30px;
+}
+
+.timeoff{
+
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+    margin-top: 80px;
+  }
+.timeoff  img{
+    margin-left: 10%;
+    height: 1100px;
+    width: 90%;
+}
+.timeoff h1{
+    font-size: 40px;
+}
+.timeoff p{
+    font-size: 30px;
+}
+
+
+.expenses{
+
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+    margin-top: 70px;
+  }
+.expenses  img{
+    margin-left: 10%;
+    height: 1100px;
+    width: 90%;
+}
+.expenses h1{
+    font-size: 40px;
+}
+.expenses p{
+    font-size: 30px;
+}
+
+.approval{
+
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+    margin-top: 70px;
+  }
+.approval  img{
+    margin-left: 10%;
+    height: 1100px;
+    width: 90%;
+}
+.approval h1{
+    font-size: 40px;
+}
+.approval p{
+    font-size: 30px;
+}
+
+
+.timeset{
+    width: 80%;
+    margin: auto;
+    
+    
+}
+.timeset > div{
+    display: flex;
+    text-align: start;
+    gap: 50px;
+    margin-left: 5%;
+}
+.timeset p{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 1000px) and (min-width: 450px) {
+    /* mobile-devices */
+    .features1  {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .features  {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+  }
+  @media all and (max-width: 449px) and (min-width: 300px) {
+    /* mobile-devices */
+    .features1  {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .features  {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .timertrack >div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .timeset > div{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+  }
+  @media all and (max-width: 299px) and (min-width: 100px) {
+    /* mobile-devices */
+    .features1  {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    
+    }
+    .features  {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .timertrack >div {
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .timeset > div{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+  }
