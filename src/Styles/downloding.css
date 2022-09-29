@@ -1,0 +1,159 @@
+.downloding{
+
+    width: 100%;
+    height: 100vh;
+    margin-top: 100px;
+}
+
+.timer{
+
+height: 500px;
+width: 70%;
+margin: auto;
+}
+.timer h1{
+    font-size: 40px;
+    text-align: center;
+}
+.timer p {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 30px;
+}
+.links{
+    
+    margin-left: 20%;
+    margin-top: 50px;
+}
+.links > div{
+    display: flex;
+    gap: 20px;
+    
+}
+li{
+    font-size: 25px;
+    color: blue;
+
+}
+.brouser{
+    width: 80%;
+    margin: auto;
+    height: 600px;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 100px;
+}
+.brouser >div{
+    display: flex;
+    gap: 30px;
+    width: 70%;
+    
+    
+    margin: auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-bottom: 30px;
+}
+.img1{
+    width: 600px;
+}
+.brouser h1{
+    font-size: 40px;
+    margin: 40px;
+}
+.brouser p{
+    font-size: 25px;
+    margin: 30px;
+}
+.brouser img{
+width: 100%;
+
+}
+.imges{
+    display: grid;
+    grid-template-columns: repeat(2,1fr
+    );
+    grid-template-rows: auto;
+    gap: 20px;
+    }
+
+
+.traking{
+    
+    margin: auto;
+    height: 500px;
+    width: 70%;
+    
+}
+.traking h1{
+    font-size: 40px;
+    justify-content: center;
+    text-align: center;
+    margin: 40px;
+}
+.btn {
+    font-size: 40px;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    margin-top: 70px;
+    height: 100px;
+    width: 30%;
+    background-color: #0288d1;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+.btn:hover{
+    color:black;
+    background-color: blueviolet;
+}
+.support {
+    display: flex;
+    width: 50%;
+    margin: auto;
+
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.support li {
+    color: black;
+    margin-left: 70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+    
+@media all and (max-width: 1000px) and (min-width: 450px) {
+    /* mobile-devices */
+    .brouser >div  {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+  }
+  @media all and (max-width: 449px) and (min-width: 300px) {
+    /* mobile-devices */
+    .brouser >div  {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    
+  }
+  @media all and (max-width: 299px) and (min-width: 100px) {
+    /* mobile-devices */
+    
+    .brouser >div  {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+      
+  }
+
+
