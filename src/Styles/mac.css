@@ -1,0 +1,28 @@
+.mac{
+    width: 70%;
+    margin: auto;
+    
+    height: 100vh;
+    margin-top: 100px;
+}
+
+.mac h1 {
+    font-size: 40px;
+    text-align: center;
+}
+.mac p {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+.imgg1{    
+    width: 20%;
+    margin: auto;
+}
+.img12345{
+    
+    width: 100%;
+    margin-left: 20%;
+    margin-top: 100px;
+}

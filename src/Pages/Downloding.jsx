@@ -20,35 +20,35 @@ const Downloding = () => {
                     <div>
                     <div>
                         <li>
-                    <Link to="/">Chrome </Link>
+                    <Link to="/chrome">Chrome </Link>
                     </li>
                 </div>
-                <div><li><Link to="/">Firefox</Link></li>
+                <div><li><Link to="/firefox">Firefox</Link></li>
                     
                 </div>
                 <div>
-                    <li><Link to="/">Edge </Link></li>
+                    <li><Link to="/edge">Edge </Link></li>
                     
                 </div>
                 <div>
-                    <li><Link to="/">Mac </Link></li>
+                    <li><Link to="/mac">Mac </Link></li>
                     
                 </div>
                 <div>
                     <li>
-                    <Link to="/">Windows </Link>
+                    <Link to="/window">Windows </Link>
                     </li>
                 </div>
                 <div>
-                    <li><Link to="/">Linux .</Link></li>
+                    <li><Link to="/linux">Linux .</Link></li>
                     
                 </div>
                 <div>
-                    <li><Link to="/">Android .</Link></li>
+                    <li><Link to="/android">Android .</Link></li>
                     
                 </div>
                 <div>
-                    <li><Link to="/">iOS .</Link></li>
+                    <li><Link to="/ios">iOS .</Link></li>
                     
                                
                 </div>
@@ -66,16 +66,21 @@ const Downloding = () => {
                 <h1>Browser extension</h1>
                 <p>Track time via extension.</p>
                <div className='imges'>
+                <Link to="/chrome">
                 <div>
                 <img  src='https://clockify.me/assets/images/chrome-store.svg'/>
                 </div>
+                </Link>
+                <Link to="/firefox">
                 <div>
                 <img  src='https://clockify.me/assets/images/firefox-store.svg'/>
                 </div>
-                
+                </Link>
+                <Link to="/edge">
                 <div>
                 <img  src='https://clockify.me/assets/images/edge-store.svg'/>
                 </div>
+                </Link>
                 </div>
             </div>
             </div>
@@ -91,16 +96,21 @@ const Downloding = () => {
                 <h1>Desktop app</h1>
                 <p>Track time on your computer.</p>
                <div className='imges'>
+               <Link to="/mac">
                 <div>
                 <img  src='https://clockify.me/assets/images/download-app-mac.svg'/>
                 </div>
+                </Link>
+                <Link to="/window">
                 <div>
                 <img  src='https://clockify.me/assets/images/download-app-windows.svg'/>
                 </div>
-                
+                </Link>
+                <Link to="/linux">
                 <div>
                 <img  src='https://clockify.me/assets/images/download-app-linux.svg'/>
                 </div>
+                </Link>
                 </div>
             </div>
             </div>
@@ -116,13 +126,16 @@ const Downloding = () => {
                 <h1>Mobile app</h1>
                 <p>Track time and expenses on your phone.</p>
                <div className='imges'>
+               <Link to="/ios">
                 <div>
                 <img  src='https://clockify.me/assets/images/app-store-ios.svg'/>
                 </div>
+                </Link>
+                <Link to="/android">
                 <div>
                 <img  src='https://clockify.me/assets/images/play-store-android.svg'/>
                 </div>
-                
+                </Link>
                 </div>
             </div>
             </div>
@@ -152,19 +165,27 @@ const Downloding = () => {
                 <h1>Chat app</h1>
                 <p>Chat via Pumble app (desktop and mobile).</p>
                <div className='imges'>
+               <Link to="/ios">
                 <div>
                 <img  src='https://clockify.me/assets/images/app-store-ios.svg'/>
                 </div>
+                </Link>
+                <Link to="/android">
                 <div>
                 <img  src='https://clockify.me/assets/images/play-store-android.svg'/>
                 </div>
+                </Link>
+                <Link to="/mac">
                 
                 <div>
                 <img  src='https://clockify.me/assets/images/download-app-mac.svg'/>
                 </div>
+                </Link>
+                <Link to="/window">
                 <div>
                 <img  src='https://clockify.me/assets/images/download-app-windows.svg'/>
                 </div>
+                </Link>
                 </div>
             </div>
             </div>

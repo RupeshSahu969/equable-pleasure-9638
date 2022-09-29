@@ -71,12 +71,12 @@ export default function NavbarLanding() {
                 <NavLink key={link}>{link}</NavLink>
               ))} */}
               <Box>
-                <Link as={ReachLink} to='/login' >
+                <Link as={ReachLink} to='/features' >
                     FEATURES
                 </Link>
               </Box>
               <Box>
-              <Link as={ReachLink} to='/login' >
+              <Link as={ReachLink} to='/downloding' >
                     DOWNLOAD
                 </Link>
               </Box>
