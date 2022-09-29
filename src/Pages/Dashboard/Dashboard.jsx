@@ -4,9 +4,9 @@ import DashReport from './Components/DashReport';
 
 const Dashboard = () => {
   return (
-    <div>
+    <div style={{ backgroundColor: "#f2f6f8" }} >
       <DashNav />
-      <DashReport/>
+      <DashReport />
     </div>
   );
 };

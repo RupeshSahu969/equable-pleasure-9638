@@ -3,10 +3,10 @@ import React from 'react';
 
 const DashReport = () => {
   return (
-    <div style={{ padding: "1%", border: "1px solid black" }}  >
+    <div style={{ padding: "1%"}}  >
       <Stack direction={{ base: "column", md: "row" }}>
         <VStack spacing="none" w={{ base: "100%", md: "80%" }} >
-          <div style={{ width: "100%", border: "1px solid black", height: "100px" }}>
+          <div style={{ width: "100%", border:"1px solid #c6d2d9", height: "100px" }}>
             <HStack spacing="none" bg="#c6d2d9" >
               <div style={{ height: "100px", width: "33%"}}>
                 <Center h="100%" >
@@ -35,11 +35,11 @@ const DashReport = () => {
 
             </HStack>
           </div>
-          <div style={{ width: "100%", height: "500px", border: "1px solid black" }}></div>
+          <div style={{ backgroundColor:"white",width: "100%", height: "500px", border:"1px solid #c6d2d9" }}></div>
         </VStack>
-        <Stack  border="1px solid #c6d2d9" w={{ base: "100%", md: "20%" }} >
+        <Stack bg="white" border="1px solid #c6d2d9" w={{ base: "100%", md: "20%" }} >
           <Box bg={"#c6d2d9"} >
-            <Flex p="3%"  >
+            <Flex p="3%" pl="5%"  >
               <Center>
                 <Text fontSize="12px" color="#999999" >Most Tracked activities</Text>
               </Center>
@@ -50,7 +50,7 @@ const DashReport = () => {
               </Select>
             </Flex>
           </Box>
-          <Box p="3%" h="fit-content" >
+          <Box p="3%" h="min-content" >
             {"Project Data here"}
           </Box>
         </Stack>

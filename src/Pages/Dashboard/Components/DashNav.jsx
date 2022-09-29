@@ -10,11 +10,11 @@ const DashNav = () => {
       </Center>
       <Spacer />
       <Stack direction={{ base: "column", sm: "row" }} >
-        <Select fontSize="13px" borderRadius={"none"} >
+        <Select bg="white" fontSize="13px" borderRadius={"none"} >
           <option style={{borderRadius:"0"}} value='project'>Project</option>
           <option value='billability'>Billability</option>
         </Select>
-        <Select fontSize="13px" borderRadius={"none"} >
+        <Select bg="white" fontSize="13px" borderRadius={"none"} >
           <option value='only_me'>Only Me</option>
           <option value='team'>Team</option>
         </Select>
