@@ -1,7 +1,7 @@
 import React from 'react'
 import features from "../Styles/features.css"
 import { useRef, useState } from "react";
-
+import { Link } from 'react-router-dom';
 const Features = () => {
 
     const [timer1, setTimer2] = useState(30);
@@ -455,6 +455,31 @@ const Features = () => {
     </div>
 
     
+    <div className='traking'>
+            <div>
+                <h1>Start tracking time with Clockify</h1>
+            
+            </div>
+            <div className='support'>
+                <div>
+                    <li>24/7 Support</li>
+                </div>
+                <div>
+                    <li>cancel Anytime</li>
+                </div>
+                <div>
+                    <li>Free Forever</li>
+                </div>
+            </div>
+            <div className='btn'>
+                <Link>
+                <button>
+                    
+                    CREATE FREE ACCOUNT
+                </button>
+                </Link>
+            </div>
+        </div>
 
 
 
