@@ -1,15 +1,15 @@
+
 import './App.css';
-import NavbarLanding from './Components/NavbarLanding';
-import LandingPage from './Pages/LandingPage/LandingPage';
-import MainRoute from './Pages/MainRoute';
-import SignUpPage from './Pages/SignUpPage.jsx/SignUpPage';
+import { Route, Routes } from 'react-router-dom';
+import { Tracker } from './Pages/Tracker/Tracker';
 
 function App() {
   return (
-    <div className="App">
-      {/* <MainRoute/> */}
-      {/* <NavbarLanding/> */}
-      {/* <LandingPage /> */}
+
+<div className='app'>
+    <Routes>
+      <Route path='/tracker' element={<Tracker />} />
+    </Routes>
     </div>
   );
 }
