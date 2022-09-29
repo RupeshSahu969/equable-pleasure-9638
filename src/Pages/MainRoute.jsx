@@ -10,6 +10,7 @@ const MainRoute = () => {
         <Route path={'/'} Element={<LandingPage/> } />
         <Route path={'/login'} Element={<LoginPage/>} />
         <Route  path={'/signup'} Element={<SignUpPage/>} />
+        <Route path='/tracker' element={<Tracker />} />
     </Routes>
   )
 }
