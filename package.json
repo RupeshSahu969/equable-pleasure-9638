@@ -12,13 +12,26 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
+    "date-fns": "^2.29.3",
     "framer-motion": "^7.4.0",
+    "mdb-react-ui-kit": "^4.2.0",
     "react": "^18.2.0",
+    "react-big-calendar": "^1.5.0",
+    "react-calendar": "^3.9.0",
+    "react-datepicker": "^4.8.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
+    "react-redux": "^8.0.4",
     "react-router-dom": "^6.4.1",
+<<<<<<< HEAD
     "react-scripts": "^5.0.1",
+=======
+    "react-scripts": "5.0.1",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.1",
+>>>>>>> 1099d9e666dd8a07ac3f0701c9732d437a8e7fee
     "styled-components": "^5.3.5",
+    "thunk": "^0.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
