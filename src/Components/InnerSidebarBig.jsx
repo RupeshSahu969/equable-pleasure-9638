@@ -1,4 +1,3 @@
-import 'aos/dist/aos.css';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -80,10 +79,23 @@ export const InnerSidebarBig = () => {
 }
 
 const InnerSidebarStyled = styled.div`
-    position: fixed;
     overflow: hidden;
-    transition: all 1s ease-in-out;
-    /* transition: All 0.4s cubic-bezier(1,-0.2,.25,.95); */
+    position: relative;
+    animation-name: animate;
+    animation-duration: .4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    @keyframes animate {
+            from {
+                width: 0px;
+            }
+
+            to {
+                width: 197px;
+            }
+
+        }
     @media screen and (max-width:800px){
         transform: translateX(-100%);
     }

@@ -61,12 +61,30 @@ export const InnerSidebarMini = () => {
 }
 
 const InnerSidebarStyled = styled.div`
+  
 #main{ 
     width:65px;
     height:615px;
     border-right:1px solid #C6D2D9;
     box-sizing: border-box;
+    position: relative;
+            animation-name: animateMini;
+            animation-duration: .4s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in;
 }
+         
+@keyframes animateMini {
+            from {
+                width: 0px;
+            }
+
+            to {
+                width: 65px;
+            }
+
+        }
 #main>div{
     display: flex;
     align-items: center;
