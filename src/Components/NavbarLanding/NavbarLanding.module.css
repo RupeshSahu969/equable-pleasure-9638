@@ -1,0 +1,29 @@
+#whole{
+    margin-right: auto;
+    margin-bottom: 70px;
+    margin-left: auto;
+    max-width: 100%;
+    text-align: center;
+    color: '#5A6B7B';
+    /* border:1px solid red; */
+}
+#links{
+    /* text-decoration:"none";  */
+    color:#5A6B7B;
+}
+#links:hover{
+    text-decoration:none;
+    color: #03A9F4;
+}
+#signup{
+    background-color:transparent; 
+    border:1px solid #03A9F4;
+    width:140px; 
+    height:40px;
+    color: #03A9F4;
+    border-radius: 3px;
+}
+#signup:hover{
+    color: #FFFFFF;
+    background-color: #03A9F4;
+}

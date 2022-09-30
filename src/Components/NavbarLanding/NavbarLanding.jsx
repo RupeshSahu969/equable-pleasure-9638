@@ -8,38 +8,17 @@ import React from 'react'
 import {
   Box,
   Flex,
-  Avatar,
   HStack,
   Link,
   IconButton,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
+  Menu, 
   useDisclosure,
-  useColorModeValue,
   Stack,
   Image,
 } from '@chakra-ui/react';
+import styles from "./NavbarLanding.module.css"
 
 
-const Links = ['Dashboard', 'Projects', 'Team'];
-
-// const NavLink = ({ children }) => (
-//   <Link
-//     px={2}
-//     py={1}
-//     rounded={'md'}
-//     _hover={{
-//       textDecoration: 'none',
-//       bg: useColorModeValue('gray.200', 'gray.700'),
-//     }}
-//     href={'https://react-icons.github.io/react-icons/search?q=close'}>
-//     {children}
-//   </Link>
-// );
 
 export default function NavbarLanding() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -47,7 +26,7 @@ export default function NavbarLanding() {
 
   return (
     <>
-      <Box border={'1px solid red'}  padding={'20px 80px'}>
+      <Box  id={styles.whole}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
@@ -71,12 +50,12 @@ export default function NavbarLanding() {
                 <NavLink key={link}>{link}</NavLink>
               ))} */}
               <Box>
-                <Link as={ReachLink} to='/features' >
+                <Link as={ReachLink} to='/login' >
                     FEATURES
                 </Link>
               </Box>
               <Box>
-              <Link as={ReachLink} to='/downloding' >
+              <Link as={ReachLink} to='/login' >
                     DOWNLOAD
                 </Link>
               </Box>
@@ -87,10 +66,10 @@ export default function NavbarLanding() {
           <HStack>
           <Flex alignItems={'center'} justifyItems={'right'} gap={10}>
             <Menu>
-              <Link as={ReachLink} to='/login' >
+              <Link id={styles.links} as={ReachLink} to='/login' >
                 LOG IN
               </Link>
-              <button onClick={()=>navigate('/signup')} to={'/signup'} style={{backgroundColor:'transparent', border:'1px solid #03A9F4' ,width:"140px", height:'40px'}} >
+              <button onClick={()=>navigate('/signup')} id={styles.signup}>
                 SIGN UP FREE
               </button>
             </Menu>
