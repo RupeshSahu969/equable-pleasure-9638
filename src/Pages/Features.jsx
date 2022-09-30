@@ -472,7 +472,7 @@ const Features = () => {
                 </div>
             </div>
             <div className='btn'>
-                <Link>
+                <Link to="/dashboard">
                 <button>
                     
                     CREATE FREE ACCOUNT

@@ -96,8 +96,8 @@ width: 100%;
     justify-content: center;
     text-align: center;
     margin-top: 70px;
-    height: 100px;
-    width: 30%;
+    height: 60px;
+    width: 25%;
     background-color: #0288d1;
     color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -112,7 +112,7 @@ width: 100%;
     width: 50%;
     margin: auto;
 
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
 }
 .support li {
     color: black;
