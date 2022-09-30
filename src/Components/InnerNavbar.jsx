@@ -120,7 +120,6 @@ line-height: 1.5;
 box-sizing: border-box;
 }
 `
-
 const InnerCompStyled = styled.div`
 display: flex;
 box-sizing: border-box;
