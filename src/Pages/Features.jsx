@@ -2,6 +2,16 @@ import React from 'react'
 import features from "../Styles/features.css"
 import { useRef, useState } from "react";
 import { Link } from 'react-router-dom';
+import ReactPlayer from "react-player"
+
+import {
+    
+    Stack,
+    
+  } from '@chakra-ui/react';
+  
+
+
 const Features = () => {
 
     const [timer1, setTimer2] = useState(30);
@@ -51,6 +61,9 @@ const Features = () => {
         <div className='div1'>Reports</div>
         
         <div className='div1'>Projects</div>
+        <div className='div1'>Apps</div>
+        
+        <div className='div1'>Timesheet</div>
         </div>
         </div>
         <div className='timekeep'>
@@ -274,6 +287,37 @@ const Features = () => {
             <div>
             <h1>Apps</h1>
             </div>
+            <div className='links'> 
+                    <div>
+                    <div>
+                        <li>
+                    <Link to="/chrome">Chrome </Link>
+                    </li>
+                </div>
+                <div><li><Link to="/firefox">Firefox</Link></li>
+                    
+                </div>
+                <div>
+                    <li><Link to="/edge">Edge </Link></li>
+                    
+                </div>
+                <div>
+                    <li><Link to="/mac">Mac </Link></li>
+                    
+                </div>
+                <div>
+                    <li>
+                    <Link to="/window">Windows </Link>
+                    </li>
+                </div>
+                
+                <div>
+                    <li><Link to="/ios">iOS .</Link></li>
+                    
+                               
+                </div>
+                </div>
+                </div>
             <div>
             <p>Track time using desktop and mobile app.</p>
             </div>
@@ -283,7 +327,7 @@ const Features = () => {
         </div>
     </div>
 
-    <div className='integration'>
+    {/* <div className='integration'>
         <div>
             <div>
             <h1>Integrations</h1>
@@ -304,7 +348,7 @@ const Features = () => {
             <img src='https://clockify.me/assets/images/integrations/time-tracking-integrations-jira.png'/>
         </div>
         </div>
-    </div>
+    </div> */}
 
     <div className='dash'>
         <div>
@@ -454,6 +498,20 @@ const Features = () => {
         </div>
     </div>
 
+    <div style={{  marginBottom:"100px",marginTop:"200px"}}>
+        <Link><p className='demo'>Watch Demo (12:36)</p></Link>
+        <div style={{ marginLeft:"20%",marginTop:"30px"}}>
+        <Stack mt={10} >
+        {/* <Image src='https://clockify.me/assets/images/time-tracker-screenshot.svg'/> */}
+        <ReactPlayer playing="false"
+        light='https://i.ytimg.com/vi/NMZhFs_b0Aw/maxresdefault.jpg'
+         src='https://i.ytimg.com/vi/NMZhFs_b0Aw/maxresdefault.jpg'
+         width={'70%'} height={'400px'} 
+          controls url='https://www.youtube.com/watch?v=NMZhFs_b0Aw'  />
+      </Stack>
+      </div>
+      </div>
+
     
     <div className='traking'>
             <div>
@@ -480,9 +538,7 @@ const Features = () => {
                 </Link>
             </div>
         </div>
-
-
-
+        
     </div>
   )
 }

@@ -38,7 +38,7 @@ const MainRoute = () => {
       <Route path='/dashboard' element={<Dashboard />} />
       <Route path='/reports' element={<Reports />} />
       <Route path='/team' element={<Team />} />
-      <Route path='/projects' element={<Projects />} />
+      
 
 
 

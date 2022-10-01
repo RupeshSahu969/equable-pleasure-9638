@@ -1,6 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import downloding from "../Styles/downloding.css"
+
+
+import ReactPlayer from "react-player"
+
+import {
+    
+    Stack,
+    
+  } from '@chakra-ui/react';
+  
 const Downloding = () => {
 
   return (
@@ -19,36 +29,51 @@ const Downloding = () => {
                 <div className='links'> 
                     <div>
                     <div>
+                    <Link to="/chrome">
                         <li>
-                    <Link to="/chrome">Chrome </Link>
+                    Chrome 
                     </li>
-                </div>
-                <div><li><Link to="/firefox">Firefox</Link></li>
-                    
+                    </Link>
                 </div>
                 <div>
-                    <li><Link to="/edge">Edge </Link></li>
-                    
+                <Link to="/firefox">
+                    <li>Firefox
+                    </li>
+                    </Link>
                 </div>
                 <div>
-                    <li><Link to="/mac">Mac </Link></li>
-                    
+                <Link to="/edge">
+                    <li>Edge </li>
+                    </Link>
                 </div>
                 <div>
+                <Link to="/mac">
+                    <li>Mac 
+                    </li>
+                    </Link>
+                </div>
+                <div><Link to="/window">
                     <li>
-                    <Link to="/window">Windows </Link>
+                    Windows 
                     </li>
+                    </Link>
                 </div>
                 <div>
-                    <li><Link to="/linux">Linux .</Link></li>
+                    <Link to="/linux"><li>Linux</li> </Link>
                     
                 </div>
                 <div>
-                    <li><Link to="/android">Android .</Link></li>
-                    
+                <Link to="/android">
+                    <li>
+                        Android
+                        </li>
+                        </Link>
                 </div>
                 <div>
-                    <li><Link to="/ios">iOS .</Link></li>
+                <Link to="/ios">
+                    <li>
+                        iOS </li>
+                        </Link>
                     
                                
                 </div>
@@ -192,6 +217,22 @@ const Downloding = () => {
             <hr/>
         </div>
 
+
+        <div style={{  marginBottom:"100px",marginTop:"100px" ,color:"blue"}}>
+        <Link><p className='demo'>Watch Demo (2:42)</p></Link>
+        <div style={{ marginLeft:"24%",marginTop:"30px"}}>
+        <Stack mt={10} >
+        {/* <Image src='https://clockify.me/assets/images/time-tracker-screenshot.svg'/> */}
+        <ReactPlayer playing="false"
+         light='https://clockify.me/assets/images/tags-fb-tw/time-tracking-apps.png'
+         src='https://clockify.me/assets/images/tags-fb-tw/time-tracking-apps.png'
+         width={'70%'} height={'500px'} 
+          controls url='https://www.youtube.com/watch?v=g_d2w5xPD0k'  />
+      </Stack>
+      </div>
+      </div>
+
+
         <div className='traking'>
             <div>
                 <h1>Start tracking time with Clockify</h1>
@@ -217,6 +258,8 @@ const Downloding = () => {
                 </Link>
             </div>
         </div>
+
+        
 
     </div>
   )
