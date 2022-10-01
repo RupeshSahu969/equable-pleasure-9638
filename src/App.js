@@ -9,8 +9,8 @@ function App() {
   
   return (
     <div>
-    <Team/>
-</div>
+
+    </div>
   );
 }
 

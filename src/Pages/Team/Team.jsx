@@ -1,6 +1,7 @@
 import { Box, Button, Center, Divider, Flex, FormControl, FormLabel, Heading, HStack, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Select, Spacer, Tab, TabList, TabPanel, TabPanels, Tabs, Text, useDisclosure, VStack } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import TeamMember from './Components/TeamMember';
+import Styles from "./Team.module.css"
 
 const Team = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -99,6 +100,7 @@ const Team = () => {
                   </VStack>
                 </VStack>
               </TabPanel>
+              <Box id={Styles.testBox} ></Box>
             </TabPanels>
           </Tabs>
         </VStack>
