@@ -5,6 +5,15 @@
     margin-top: 100px;
 }
 
+.demo{
+    text-align: center;
+    font-size: 40px;
+}
+
+/* img:hover{
+    transform: scale(1.1);
+    
+  } */
 .timer{
 
 height: 500px;
@@ -21,8 +30,7 @@ margin: auto;
     font-size: 30px;
 }
 .links{
-    
-    margin-left: 20%;
+    margin-right: 100px;
     margin-top: 50px;
 }
 .links > div{
@@ -32,16 +40,16 @@ margin: auto;
 }
 li{
     font-size: 25px;
-    color: blue;
-
+    
+    
 }
 .brouser{
     width: 80%;
     margin: auto;
-    height: 600px;
+    height: 500px;
     width: 70%;
     margin: auto;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 }
 .brouser >div{
     display: flex;
@@ -91,12 +99,12 @@ width: 100%;
     margin: 40px;
 }
 .btn {
-    font-size: 40px;
+    font-size: 20px;
     margin: auto;
     justify-content: center;
     text-align: center;
     margin-top: 70px;
-    height: 60px;
+    height: 35px;
     width: 25%;
     background-color: #0288d1;
     color: white;
@@ -109,14 +117,14 @@ width: 100%;
 }
 .support {
     display: flex;
-    width: 50%;
+    
     margin: auto;
 
     /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
 }
 .support li {
     color: black;
-    margin-left: 70px;
+    margin-left: 100px;
 }
 
 

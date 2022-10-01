@@ -40,7 +40,7 @@ const LandingPage = () => {
   return (
     <div id={styles.whole}>
       <div  >
-        <NavbarLanding/>
+        {/* <NavbarLanding/> */}
       </div>
 
       <div>
@@ -82,7 +82,11 @@ const LandingPage = () => {
 
       <Stack mt={10} >
         {/* <Image src='https://clockify.me/assets/images/time-tracker-screenshot.svg'/> */}
-        <ReactPlayer playing="false" light='https://clockify.me/assets/images/time-tracker-screenshot.svg' src='https://clockify.me/assets/images/time-tracker-screenshot.svg' width={'auto'} height={'600px'} controls url='https://youtu.be/NMZhFs_b0Aw'  />
+        <ReactPlayer playing="false"
+         light='https://clockify.me/assets/images/time-tracker-screenshot.svg' 
+         src='https://clockify.me/assets/images/time-tracker-screenshot.svg'
+          width={'auto'} height={'600px'}
+           controls url='https://youtu.be/NMZhFs_b0Aw'  />
       </Stack>
 
       <Stack mt={20}>

@@ -2,10 +2,10 @@
   
     /* height: 500px; */
     width: 100%;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 .features1{
-    width: 70%;
+    width: 100%;
     height: 400px;
     margin: auto;
   
@@ -56,11 +56,18 @@
     margin: auto;
     height: 100vh;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
+  /* img:hover{
+    transform: scale(1.1);
+    
+  } */
+  
 .timertrack  img{
     margin-left: 10%;
-    height: 1100px;
+    height: 100vh;
+    width: auto;
+    
 }
 .timertrack h1{
     font-size: 40px;
@@ -81,7 +88,7 @@
   }
 .timersheet  img{
     margin-left: 10%;
-    height: 1100px;
+    height: 100vh;
 }
 .timersheet h1{
     font-size: 40px;
@@ -97,12 +104,12 @@
     width: 80%;
     margin: auto;
     height: 100vh;
-    margin-top: 100px;
-    margin-bottom: 350px;
+    margin-top: 200px;
+    margin-bottom: 300px;
   }
 .kiosk  img{
     margin-left: 10%;
-    height: 1100px;
+    height: 100vh;
 }
 .kiosk h1{
     font-size: 40px;
@@ -118,12 +125,12 @@
     width: 80%;
     margin: auto;
     height: 100vh;
-    margin-top: 100px;
-    margin-bottom: 300px;
+    margin-top: 600px;
+    margin-bottom: 500px;
   }
 .calendar  img{
     margin-left: 10%;
-    height: 1100px;
+    height: 100vh
 }
 .calendar h1{
     font-size: 40px;
@@ -139,15 +146,19 @@
     width: 80%;
     margin: auto;
     height: 100vh;
-    margin-top: 100px;
+    margin-top: 500px;
+    margin-bottom: 400px;
+    
   }
 .app  img{
     margin-left: 10%;
-    height: 1100px;
+    height: 100vh
+    
 }
 .app h1{
     font-size: 40px;
     text-align: center;
+    margin-top: 30px;
 }
 .app p{
     font-size: 30px;
@@ -159,14 +170,16 @@
     width: 80%;
     margin: auto;
     height: 100vh;
-    margin-top: 100px;
+    margin-top: 400px;
+    margin-bottom: 200px;
   }
 .integration  img{
     border: 1px solid black;
     margin-left: 20%;
     cursor: pointer;
     width: 70%;
-    margin-top: 30px;
+    margin-top: 400px;
+    
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .integration h1{
@@ -183,13 +196,13 @@
     width: 80%;
     margin: auto;
     height: 100vh;
-    margin-top: 400px;
-    margin-bottom: 500px;
+    margin-top: 200px;
+    margin-bottom: 200px;
   }
 .dash  img{
     margin-left: 15%;
-    height: 1200px;
-    width: 80%;
+    
+    height: 100vh
 }
 .dash h1{
     font-size: 40px;
@@ -207,12 +220,13 @@
     width: 80%;
     margin: auto;
     height: 100vh;
-    margin-top: 250px;
+    margin-top: 300px;
+    margin-bottom: 200px;
   }
 .repot1  img{
     margin-left: 15%;
-    height: 1100px;
-    width: 80%;
+    height: 100vh;
+    width: "auto"
 }
 .repot1 h1{
     font-size: 40px;
@@ -227,12 +241,13 @@
     width: 80%;
     margin: auto;
     height: 100vh;
-    margin-top: 80px;
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
 .activity  img{
     margin-left: 10%;
-    height: 1100px;
-    width: 90%;
+    height: 100vh;
+    width: auto;
 }
 .activity h1{
     font-size: 40px;
@@ -248,12 +263,14 @@
     width: 80%;
     margin: auto;
     height: 100vh;
-    margin-top: 80px;
+    margin-top: 200px;
+    margin-bottom: 100px;
   }
 .project  img{
+    
     margin-left: 10%;
-    height: 1100px;
-    width: 90%;
+    height: 100vh;
+    width: auto;
 }
 .project h1{
     font-size: 40px;
@@ -269,12 +286,13 @@
     width: 80%;
     margin: auto;
     height: 100vh;
-    margin-top: 80px;
+    margin-top: 100px;
+    margin-bottom: 50px;
   }
 .team  img{
-    margin-left: 10%;
-    height: 1100px;
-    width: 90%;
+    
+    height: 100vh;
+    width: auto;
 }
 .team h1{
     font-size: 40px;
@@ -290,12 +308,13 @@
     width: 80%;
     margin: auto;
     height: 100vh;
-    margin-top: 80px;
+    margin-top: 100px;
+    margin-bottom: 150px;
   }
 .timeoff  img{
-    margin-left: 10%;
-    height: 1100px;
-    width: 90%;
+    
+    height: 100vh;
+    width: auto;
 }
 .timeoff h1{
     font-size: 40px;
@@ -312,12 +331,13 @@
     width: 80%;
     margin: auto;
     height: 100vh;
-    margin-top: 70px;
+    margin-top: 100px;
+    margin-bottom: 150px;
   }
 .expenses  img{
-    margin-left: 10%;
-    height: 1100px;
-    width: 90%;
+    
+    height: 100vh;
+    width: auto;
 }
 .expenses h1{
     font-size: 40px;
@@ -333,12 +353,14 @@
     width: 80%;
     margin: auto;
     height: 100vh;
-    margin-top: 70px;
+    margin-top: 200px;
+    margin-bottom: 200px;
   }
 .approval  img{
-    margin-left: 10%;
-    height: 1100px;
-    width: 90%;
+    
+    
+    height: 100vh;
+    width: auto;
 }
 .approval h1{
     font-size: 40px;
@@ -369,14 +391,12 @@
 
 
 
-
 .traking{
     
     margin: auto;
     height: 500px;
     width: 70%;
-    margin-top: 200px;
-    margin-bottom: 100px;
+    
 }
 .traking h1{
     font-size: 40px;
@@ -385,12 +405,12 @@
     margin: 40px;
 }
 .btn {
-    font-size: 30px;
+    font-size: 20px;
     margin: auto;
     justify-content: center;
     text-align: center;
     margin-top: 70px;
-    height: 60px;
+    height: 35px;
     width: 25%;
     background-color: #0288d1;
     color: white;
@@ -398,24 +418,43 @@
 
 }
 .btn:hover{
-    color:rgb(227, 223, 223);
-    background-color: rgb(24, 15, 33);
+    color:black;
+    background-color: blueviolet;
 }
 .support {
     display: flex;
-    width: 50%;
+    
     margin: auto;
 
     /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
 }
 .support li {
     color: black;
-    margin-left: 70px;
+    margin-left: 100px;
 }
 
 
+.demo{
+    text-align: center;
+    font-size: 40px;
+}
 
-
+.links{
+    
+    margin-left: 30%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.links > div{
+    display: flex;
+    gap: 20px;
+    
+}
+li{
+    font-size: 25px;
+    color: blue;
+    text-align: center;
+}
 
 
 @media all and (max-width: 1000px) and (min-width: 450px) {
