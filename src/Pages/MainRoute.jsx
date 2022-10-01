@@ -2,7 +2,7 @@ import React from 'react'
 import  { Route, Routes } from "react-router-dom"
 import LandingPage from './LandingPage/LandingPage'
 import LoginPage from './LoginPage/LoginPage'
-import SignUpPage from './SignUpPage.jsx/SignUpPage'
+import SignUpPage from './SignUpPage/SignUpPage'
 import Chrome from "./Chrome"
 import Android from "./Android"
 import Edge from "./Edge"
@@ -18,9 +18,9 @@ import Calendr from './Calendar'
 const MainRoute = () => {
   return (
     <Routes>
-        <Route path={'/'} Element={<LandingPage/> } />
-        <Route path={'/login'} Element={<LoginPage/>} />
-        <Route  path={'/signup'} Element={<SignUpPage/>} />
+        <Route path={'/'} element={<LandingPage/> } />
+        <Route path={'/login'} element={<LoginPage/>} />
+        <Route  path={'/signup'} element={<SignUpPage/>} />
         <Route path='/chrome' element={<Chrome />} />
         <Route  path='/android' element={<Android/>} />
         <Route path='/edge' element={<Edge/>} />

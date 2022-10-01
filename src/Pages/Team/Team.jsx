@@ -100,7 +100,7 @@ const Team = () => {
                   </VStack>
                 </VStack>
               </TabPanel>
-              <Box id={Styles.testBox} ></Box>
+              {/* <Box id={Styles.testBox} ></Box> */}
             </TabPanels>
           </Tabs>
         </VStack>

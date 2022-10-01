@@ -1,16 +1,17 @@
 
 import './App.css';
-import Team from './Pages/Team/Team';
+import LandingPage from './Pages/LandingPage/LandingPage';
+import MainRoute from './Pages/MainRoute';
+
 
 
 
 
 function App() {
-  
   return (
     <div>
-
-    </div>
+        <MainRoute/>
+     </div>
   );
 }
 
