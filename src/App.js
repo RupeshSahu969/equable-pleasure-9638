@@ -1,7 +1,9 @@
 
 import './App.css';
+import Dashboard from './Pages/Dashboard/Dashboard';
 // import LandingPage from './Pages/LandingPage/LandingPage';
 import MainRoute from './Pages/MainRoute';
+import Reports from './Pages/Reports/Reports';
 
 
 
@@ -10,7 +12,9 @@ import MainRoute from './Pages/MainRoute';
 function App() {
   return (
     <div>
-        <MainRoute/>
+        {/* <MainRoute/> */}
+        {/* <Reports/> */}
+        <Dashboard/>
      </div>
   );
 }
