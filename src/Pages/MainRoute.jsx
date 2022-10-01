@@ -13,8 +13,7 @@ import Mac from "./Mac"
 import Window from "./Window"
 import Downloding from "./Downloding"
 import Features from "./Features"
-import ErrorPage from './ErrorPage'
-
+import Calendr from './Calendar'
 
 const MainRoute = () => {
   return (
@@ -30,9 +29,9 @@ const MainRoute = () => {
         <Route path='/linux' element={<Linux/>} />
         <Route path='/window' element={<Window/>} />
         <Route path='/mac' element={<Mac/>} />
+        <Route path='calendar' element={<Calendr/>}  />
         <Route path='features' element={<Features/>} />
         <Route path='downloding' element={<Downloding/>} />
-        <Route path='*' element={<ErrorPage/>}/>
 
 
 

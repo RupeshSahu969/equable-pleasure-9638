@@ -33,7 +33,7 @@
 }
 .div1{
     font-size: 20px;
-    background-color: rgb(238, 228, 228);
+    /* background-color: rgb(238, 228, 228); */
     color: black;
     text-align: center;
     width: 150px;
@@ -385,28 +385,28 @@
     margin: 40px;
 }
 .btn {
-    font-size: 40px;
+    font-size: 30px;
     margin: auto;
     justify-content: center;
     text-align: center;
     margin-top: 70px;
-    height: 100px;
-    width: 30%;
+    height: 60px;
+    width: 25%;
     background-color: #0288d1;
     color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
 }
 .btn:hover{
-    color:black;
-    background-color: blueviolet;
+    color:rgb(227, 223, 223);
+    background-color: rgb(24, 15, 33);
 }
 .support {
     display: flex;
     width: 50%;
     margin: auto;
 
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
 }
 .support li {
     color: black;

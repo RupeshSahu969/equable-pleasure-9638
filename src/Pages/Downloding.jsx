@@ -209,7 +209,7 @@ const Downloding = () => {
                 </div>
             </div>
             <div className='btn'>
-                <Link>
+                <Link to="/">
                 <button>
                     
                     CREATE FREE ACCOUNT

@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { InnerSidebarBig } from './InnerSidebarBig'
 import { InnerSidebarMini } from './InnerSidebarMini'
+import { TimeTracker } from './TimeTracker'
 
 export const InnerNavbar = () => {
     const [open, setOpen] = useState(false)
@@ -33,9 +34,14 @@ export const InnerNavbar = () => {
                     </div>
                 </div>
             </InnerNavbarStyled>
-            {
-                open ? (<InnerSidebarBig />) : (<InnerSidebarMini />)
-            }
+            <InnerCompStyled>
+                <div>
+                    {
+                        open ? (<InnerSidebarBig />) : (<InnerSidebarMini />)
+                    }
+                </div>
+                <TimeTracker />
+            </InnerCompStyled>
         </>
     )
 }
@@ -87,7 +93,7 @@ box-sizing: border-box;
 #btnUpgrade{
 padding: 0.25rem 0.5rem;
 border: 1px solid #03a9f4;
-font-size: .7rem;
+font-size: .75rem;
 line-height: 1.4;
 border-radius: 2px;
 color: #03a9f4;
@@ -113,4 +119,8 @@ font-size: 0.9rem;
 line-height: 1.5;
 box-sizing: border-box;
 }
+`
+const InnerCompStyled = styled.div`
+display: flex;
+box-sizing: border-box;
 `
