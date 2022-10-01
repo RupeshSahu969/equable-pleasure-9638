@@ -1,19 +1,15 @@
-
-import { Box } from '@chakra-ui/react';
 import './App.css';
-import Dashboard from './Pages/Dashboard/Dashboard';
-// import LandingPage from './Pages/LandingPage/LandingPage';
+import { InnerMainRoute } from './Pages/InnerMainRoute';
 import MainRoute from './Pages/MainRoute';
-import Reports from './Pages/Reports/Reports';
-
-
 
 function App() {
+  let isAuth = true
   return (
     <div>
-        <Dashboard/>
-     </div>
+      {
+        !isAuth ? (<MainRoute />) : (<InnerMainRoute />)
+      }
+    </div>
   );
 }
-
 export default App;

@@ -1,18 +1,26 @@
+import {
+    Box, Menu,
+    MenuButton,
+    MenuItem,
+    MenuList
+} from "@chakra-ui/react"
 import React, { useState } from 'react'
+import { useDispatch, useSelector } from "react-redux"
 import styled from 'styled-components'
-import { InnerSidebarBig } from './InnerSidebarBig'
-import { InnerSidebarMini } from './InnerSidebarMini'
-import { TimeTracker } from './TimeTracker'
+import { DrawerMenu } from "./DrawerMenu"
+import { openFun } from "./Redux/action"
 
 export const InnerNavbar = () => {
-    const [open, setOpen] = useState(false)
+    const dispatch = useDispatch()
+    const open = useSelector((state) => state.open)
+
 
     return (
         <>
             <InnerNavbarStyled>
                 <div id='main'>
                     <div>
-                        <div onClick={() => setOpen(!open)} color='red'>
+                        <div onClick={dispatch(openFun(!open))} color='red'>
                             <svg id='menu' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#666" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" /></svg>
                         </div>
                         <div id='logo'>
@@ -30,18 +38,25 @@ export const InnerNavbar = () => {
                         <div id="notification">
                             <img src="https://app.clockify.me/assets/nav-icons/notification.svg" alt="notify" />
                         </div>
-                        <div><div id='login'>BE</div></div>
+                        <div>
+                            {/* <div id='login'>BE</div> */}
+                            <Menu>
+                                <MenuButton as={Box} className='login'>
+                                    be
+                                </MenuButton>
+                                <MenuList>
+                                    <Box m={'7px'} mt={'2px'} mb={'2px'} p={'5px'} fontSize={'14px'}>Bega95091</Box>
+                                    <Box m={'7px'} mt={'2px'} mb={'2px'} p={'5px'} fontSize={'12px'} color={'#7a7676'}>bega95091@gmail.com</Box>
+                                    <MenuItem borderTop={'1px solid #C6D2D9'} className='loginList'>Profile settings</MenuItem>
+                                    <MenuItem className='loginList'>Download apps</MenuItem>
+                                    <MenuItem className='loginList' borderBottom={'1px solid #C6D2D9'} >Try chat app</MenuItem>
+                                    <MenuItem className='loginList'>Log out</MenuItem>
+                                </MenuList>
+                            </Menu>
+                        </div>
                     </div>
                 </div>
             </InnerNavbarStyled>
-            <InnerCompStyled>
-                <div>
-                    {
-                        open ? (<InnerSidebarBig />) : (<InnerSidebarMini />)
-                    }
-                </div>
-                <TimeTracker />
-            </InnerCompStyled>
         </>
     )
 }
@@ -105,7 +120,7 @@ box-sizing: border-box;
 color: white;
 background-color: #03a9f4;
 }
-#login{
+.login{
 min-width: 32px;
 min-height: 32px;
 border-radius: 50%;
@@ -118,11 +133,15 @@ align-items: center;
 font-size: 0.9rem;
 line-height: 1.5;
 box-sizing: border-box;
+text-align: center;
 }
-`
-const InnerCompStyled = styled.div`
-display: flex;
-box-sizing: border-box;
-
-
+.loginList{
+font-size: 14px;
+color:#6b6767;
+padding-top: 8px;
+padding-bottom: 8px;
+&:hover{
+    color:black;
+}
+}
 `
