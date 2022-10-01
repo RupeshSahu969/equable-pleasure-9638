@@ -9,7 +9,7 @@ const Team = () => {
   const initialRef = React.useRef(null)
   const finalRef = React.useRef(null)
 
-  const [newEmail, setNewEmail] = useState("")
+  const [newEmail, setNewEmail] = useState("");
   const [memberList, setMemberList] = useState([]);
 
   const handleMemberAdd = () => {
@@ -35,19 +35,20 @@ const Team = () => {
   }
 
   const handleSearch = (e) => {
-    // let q = e.target.value;
-    // let arr = memberList;
-    // arr.filter((el) => {
-    //   return q === el.email;
-    // })
-    // setMemberList([...arr])
+    let q = e.target.value;
+    let arr = [...memberList].filter((el) => {
+      return el.email.startsWith(q);
+    })
+    setMemberList([...arr])
   }
 
   const [group, setGroup] = useState("");
   const [groupMembers, setGroupMembers] = useState([]);
+  const [groupList, setGroupList] = useState([]);
 
   const handleAddGroup = () => {
     const groupInfo = {
+      name: "",
       
     }
   }
@@ -60,9 +61,9 @@ const Team = () => {
           <Text justifyContent="flex-start" >Team</Text>
           <Tabs variant='enclosed' w="100%" gap="10px" >
             <TabList  >
-              <Tab border="1px solid #c6d2d9" borderBottom="none" _selected={{ bg: "white" }} borderRadius="none" >MEMBERS</Tab>
-              <Tab border="1px solid #c6d2d9" borderBottom="none" _selected={{ bg: "white" }} borderRadius="none" >GROUPS</Tab>
-              <Tab border="1px solid #c6d2d9" borderBottom="none" _selected={{ bg: "white" }} borderRadius="none" >REMINDERS</Tab>
+              <Tab border="1px solid #c6d2d9" mr="10px" borderBottom="none" _selected={{ bg: "white", border: "1px solid #c6d2d9", borderBottom: "none" }} borderRadius="none" >MEMBERS</Tab>
+              <Tab border="1px solid #c6d2d9" mr="10px" borderBottom="none" _selected={{ bg: "white", border: "1px solid #c6d2d9", borderBottom: "none" }} borderRadius="none" >GROUPS</Tab>
+              <Tab border="1px solid #c6d2d9" mr="10px" borderBottom="none" _selected={{ bg: "white", border: "1px solid #c6d2d9", borderBottom: "none" }} borderRadius="none" >REMINDERS</Tab>
             </TabList>
             <TabPanels border="1px solid #c6d2d9" bg="white" h="max-content" pb="20px" >
               <TabPanel>

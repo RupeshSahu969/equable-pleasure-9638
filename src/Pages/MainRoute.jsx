@@ -17,6 +17,7 @@ import Calendr from './Calendar'
 import Dashboard from './Dashboard/Dashboard'
 import Reports from './Reports/Reports'
 import Team from './Team/Team'
+import Projects from './Projects/Projects'
 
 const MainRoute = () => {
   return (
