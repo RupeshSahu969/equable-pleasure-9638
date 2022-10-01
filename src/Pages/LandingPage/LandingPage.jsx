@@ -402,20 +402,26 @@ const LandingPage = () => {
     
 
     <Stack mb={'150px'}>
-    
+    {/* <SimpleGrid columns={{ base: 1, md: 2 }} >  */}
       <Text  color={' #78909C'} fontSize={'12px'} >MORE USE CASES</Text>
       <Center>
-      <Flex>
-       
+      <Flex> 
+      <Grid
+        templateColumns={{
+          base: 'repeat(1, 190px)',
+          sm: 'repeat(2, 190px)',
+          md: 'repeat(6, auto)',
+        }}>
         <Box className={styles.smallTexts} >Time Clock</Box>
         <Box className={styles.smallTexts} >Work Hours Tracker</Box>
         <Box className={styles.smallTexts} >Employee Time Tracker</Box>
         <Box className={styles.smallTexts} >Attendance Tracker</Box>
         <Box className={styles.smallTexts} >Task Timer</Box>
         <Box className={styles.smallTexts} >Time Card Calculator</Box>
-        
+        </Grid>
       </Flex>
       </Center>
+      {/* </SimpleGrid> */}
     </Stack>
 
     
@@ -424,8 +430,6 @@ const LandingPage = () => {
       <Flex  >
           <Image
           w={'full'}
-          
-          
             rounded={'md'}
             alt={'feature image'}
             src={
@@ -465,21 +469,40 @@ const LandingPage = () => {
         }}
         gap={{ base: '8', sm: '12', md: '16' }}>
      <Flex border={'1px solid red'}>
-      <Image float={'left'} src='https://clockify.me/assets/images/support-phone.svg'  />
+      <Image boxSize={10} border={'1px red solid'} src='https://clockify.me/assets/images/support-phone.svg'  />
 
-        <Box display={'block'} maxW={'135px'} color={'#78909C'} fontSize={'14px'} >
-          <Box fontSize={'28px'} color={'#3D4853'}>24/7</Box> <br/>
+        <Box  textAlign={'left'} display={'block'} maxW={'135px'} color={'#78909C'} fontSize={'14px'} >
+          <Box fontSize={'28px'} color={'#3D4853'}>24/7</Box>
           <Box>support anytime, anywhere</Box>
         </Box>
      </Flex>
 
-     <Box border={'1px solid red'}>
-      <Box>
+     <Flex border={'1px solid red'}>
+      <Image boxSize={10} border={'1px red solid'} src='https://clockify.me/assets/images/support-phone.svg'  />
 
-      </Box>
-     </Box>
-     <Box border={'1px solid red'}></Box>
-     <Box border={'1px solid red'}></Box>
+        <Box  textAlign={'left'} display={'block'} maxW={'135px'} color={'#78909C'} fontSize={'14px'} >
+          <Box fontSize={'28px'} color={'#3D4853'}>24/7</Box>
+          <Box>support anytime, anywhere</Box>
+        </Box>
+     </Flex>
+
+      <Flex border={'1px solid red'}>
+      <Image boxSize={10} border={'1px red solid'} src='https://clockify.me/assets/images/support-phone.svg'  />
+
+        <Box  textAlign={'left'} display={'block'} maxW={'135px'} color={'#78909C'} fontSize={'14px'} >
+          <Box fontSize={'28px'} color={'#3D4853'}>24/7</Box>
+          <Box>support anytime, anywhere</Box>
+        </Box>
+     </Flex>
+     
+     <Flex border={'1px solid red'}>
+      <Image boxSize={10} border={'1px red solid'} src='https://clockify.me/assets/images/support-phone.svg'  />
+
+        <Box  textAlign={'left'} display={'block'} maxW={'135px'} color={'#78909C'} fontSize={'14px'} >
+          <Box fontSize={'28px'} color={'#3D4853'}>24/7</Box>
+          <Box>support anytime, anywhere</Box>
+        </Box>
+     </Flex>
       </Grid>
       </Center>
     </Box>

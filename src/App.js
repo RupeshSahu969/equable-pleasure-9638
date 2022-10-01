@@ -1,6 +1,6 @@
 
 import './App.css';
-import LandingPage from './Pages/LandingPage/LandingPage';
+// import LandingPage from './Pages/LandingPage/LandingPage';
 import MainRoute from './Pages/MainRoute';
 
 
