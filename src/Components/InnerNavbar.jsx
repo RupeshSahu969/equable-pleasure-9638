@@ -124,4 +124,5 @@ const InnerCompStyled = styled.div`
 display: flex;
 box-sizing: border-box;
 
+
 `
