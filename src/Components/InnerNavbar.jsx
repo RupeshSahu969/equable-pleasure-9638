@@ -1,3 +1,9 @@
+import {
+    Box, Menu,
+    MenuButton,
+    MenuItem,
+    MenuList
+} from "@chakra-ui/react"
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { InnerSidebarBig } from './InnerSidebarBig'
@@ -30,7 +36,22 @@ export const InnerNavbar = () => {
                         <div id="notification">
                             <img src="https://app.clockify.me/assets/nav-icons/notification.svg" alt="notify" />
                         </div>
-                        <div><div id='login'>BE</div></div>
+                        <div>
+                            {/* <div id='login'>BE</div> */}
+                            <Menu>
+                                <MenuButton as={Box} className='login'>
+                                    be
+                                </MenuButton>
+                                <MenuList>
+                                    <Box m={'7px'} mt={'2px'} mb={'2px'} p={'5px'} fontSize={'14px'}>Bega95091</Box>
+                                    <Box m={'7px'} mt={'2px'} mb={'2px'} p={'5px'} fontSize={'12px'} color={'#7a7676'}>bega95091@gmail.com</Box>
+                                    <MenuItem borderTop={'1px solid #C6D2D9'} className='loginList'>Profile settings</MenuItem>
+                                    <MenuItem className='loginList'>Download apps</MenuItem>
+                                    <MenuItem className='loginList' borderBottom={'1px solid #C6D2D9'} >Try chat app</MenuItem>
+                                    <MenuItem className='loginList'>Log out</MenuItem>
+                                </MenuList>
+                            </Menu>
+                        </div>
                     </div>
                 </div>
             </InnerNavbarStyled>
@@ -105,7 +126,7 @@ box-sizing: border-box;
 color: white;
 background-color: #03a9f4;
 }
-#login{
+.login{
 min-width: 32px;
 min-height: 32px;
 border-radius: 50%;
@@ -118,6 +139,16 @@ align-items: center;
 font-size: 0.9rem;
 line-height: 1.5;
 box-sizing: border-box;
+text-align: center;
+}
+.loginList{
+font-size: 14px;
+color:#6b6767;
+padding-top: 8px;
+padding-bottom: 8px;
+&:hover{
+    color:black;
+}
 }
 `
 const InnerCompStyled = styled.div`
