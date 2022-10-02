@@ -10,8 +10,8 @@ const Projects = () => {
     tracked: "8000",
     amount: "5000 USD",
     progress: "40%",
-    access: "",
-    isStarred: "",
+    access: [],
+    isStarred: false,
   }
 
   const { isOpen, onOpen, onClose } = useDisclosure()
