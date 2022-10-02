@@ -15,16 +15,16 @@ export const InnerMainRoute = () => {
             <InnerNavbar />
             <FlexStyled>
                 <div><DrawerMenu /></div>
-                <div>
-                    <Routes>
-                        <Route path={'/tracker'} element={<Tracker />} />
-                        <Route path={'/calendar'} element={<Calendr />} />
-                        <Route path='/dashboard' element={<Dashboard />} />
-                        <Route path='/reports' element={<Reports />} />
-                        <Route path='/team' element={<Team />} />
-                        {/* <Route path='*' element={<h1>404 page not found</h1>} /> */}
-                    </Routes>
-                </div>
+                {/* <div> */}
+                <Routes>
+                    <Route path={'/tracker'} element={<Tracker />} />
+                    <Route path={'/calendar'} element={<Calendr />} />
+                    <Route path='/dashboard' element={<Dashboard />} />
+                    <Route path='/reports' element={<Reports />} />
+                    <Route path='/team' element={<Team />} />
+                    {/* <Route path='*' element={<h1>404 page not found</h1>} /> */}
+                </Routes>
+                {/* </div> */}
             </FlexStyled>
         </>
     )
