@@ -15,8 +15,8 @@ export const InnerMainRoute = () => {
         <>
             <InnerNavbar />
             <FlexStyled>
-                <div><DrawerMenu /></div>
-                <div>
+                <div className={'menu'}><DrawerMenu /></div>
+                <div className='innerComp'>
                     <Routes>
                         <Route path={'/tracker'} element={<Tracker />} />
                         <Route path={'/calendar'} element={<Calendr />} />
@@ -34,4 +34,11 @@ export const InnerMainRoute = () => {
 
 const FlexStyled = styled.div`
 display: flex;
+.menu{
+    width:auto;
+}
+.innerComp{
+    width:100%;
+    height:auto;
+}
 `

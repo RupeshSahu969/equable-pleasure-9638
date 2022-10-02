@@ -61,10 +61,12 @@ export const Tracker = () => {
     )
 }
 
-const TimeStyled = styled.div`    
+const TimeStyled = styled.div`   
+height:auto; 
 background-color: #f2f6f8;
 width: 100%;
 box-sizing: border-box;
+border-top: 1px solid #C6D2D9;
 .main{
 margin: 40px 20px 10px 20px;
 background-color: white;
