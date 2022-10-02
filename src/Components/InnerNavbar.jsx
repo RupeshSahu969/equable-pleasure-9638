@@ -5,20 +5,22 @@ import {
     MenuList
 } from "@chakra-ui/react"
 import React, { useState } from 'react'
+import { useDispatch, useSelector } from "react-redux"
 import styled from 'styled-components'
-import { InnerSidebarBig } from './InnerSidebarBig'
-import { InnerSidebarMini } from './InnerSidebarMini'
-import { TimeTracker } from './TimeTracker'
+import { DrawerMenu } from "./DrawerMenu"
+import { openFun } from "./Redux/action"
 
 export const InnerNavbar = () => {
-    const [open, setOpen] = useState(false)
+    const dispatch = useDispatch()
+    const open = useSelector((state) => state.open)
 
+    
     return (
         <>
             <InnerNavbarStyled>
                 <div id='main'>
                     <div>
-                        <div onClick={() => setOpen(!open)} color='red'>
+                        <div onClick={() =>dispatch(openFun(!open))} color='red'>
                             <svg id='menu' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#666" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" /></svg>
                         </div>
                         <div id='logo'>
@@ -55,14 +57,6 @@ export const InnerNavbar = () => {
                     </div>
                 </div>
             </InnerNavbarStyled>
-            <InnerCompStyled>
-                <div>
-                    {
-                        open ? (<InnerSidebarBig />) : (<InnerSidebarMini />)
-                    }
-                </div>
-                <TimeTracker />
-            </InnerCompStyled>
         </>
     )
 }
@@ -150,10 +144,4 @@ padding-bottom: 8px;
     color:black;
 }
 }
-`
-const InnerCompStyled = styled.div`
-display: flex;
-box-sizing: border-box;
-
-
 `

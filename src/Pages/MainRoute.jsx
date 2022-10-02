@@ -1,22 +1,18 @@
 import React from 'react'
 import { Route, Routes } from "react-router-dom"
-import LandingPage from './LandingPage/LandingPage'
-import LoginPage from './LoginPage/LoginPage'
-import SignUpPage from './SignUpPage/SignUpPage'
-import Chrome from "./Chrome"
 import Android from "./Android"
+import Chrome from "./Chrome"
+import Downloding from "./Downloding"
 import Edge from "./Edge"
+import Features from "./Features"
 import Firefox from "./Firefox"
 import Ios from './Ios'
+import LandingPage from './LandingPage/LandingPage'
 import Linux from "./Linux"
+import LoginPage from './LoginPage/LoginPage'
 import Mac from "./Mac"
+import SignUpPage from './SignUpPage/SignUpPage'
 import Window from "./Window"
-import Downloding from "./Downloding"
-import Features from "./Features"
-import Calendr from './Calendar'
-import Dashboard from './Dashboard/Dashboard'
-import Reports from './Reports/Reports'
-import Team from './Team/Team'
 
 const MainRoute = () => {
   return (
@@ -32,18 +28,10 @@ const MainRoute = () => {
       <Route path='/linux' element={<Linux />} />
       <Route path='/window' element={<Window />} />
       <Route path='/mac' element={<Mac />} />
-      <Route path='calendar' element={<Calendr />} />
       <Route path='features' element={<Features />} />
       <Route path='downloding' element={<Downloding />} />
-      <Route path='/dashboard' element={<Dashboard />} />
-      <Route path='/reports' element={<Reports />} />
-      <Route path='/team' element={<Team />} />
-      
-
-
-
+      <Route path='*' element={<h1>404 page not found</h1>} />
     </Routes>
   )
 }
-
 export default MainRoute
