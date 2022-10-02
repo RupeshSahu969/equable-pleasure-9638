@@ -1,3 +1,4 @@
+import { Flex, Spacer } from '@chakra-ui/react';
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 
@@ -34,12 +35,14 @@ export const Tracker = () => {
     return (
         <TimeStyled>
             <div id='main'>
-                <div>
+                <div className='inputProject'>
                     <div className='input'>
                         <input type="text" placeholder='What are you working on?' />
                     </div>
-                    <div className='project'><img src="https://app.clockify.me/assets/ui-icons/plus-blue.svg" alt="add" /><span>Project</span>
-                    </div>
+                    <Flex cursor="pointer" justifyContent="center" alignItems="center" >
+                        <img src="https://app.clockify.me/assets/ui-icons/plus-blue.svg" alt="add" />
+                        <span style={{ paddingLeft: "10px" }} >Project</span>
+                    </Flex>
                 </div>
 
                 <div>
@@ -57,34 +60,33 @@ export const Tracker = () => {
                     </div>
                 </div>
             </div>
-        </TimeStyled>
+        </TimeStyled >
     )
 }
 
 const TimeStyled = styled.div`   
 background-color: #f2f6f8;
+height:100%;
 width: 100%;
 box-sizing: border-box;
 border-top: 1px solid #C6D2D9;
-height:auto;
 #main{
 margin: 40px 20px 10px 20px;
 background-color: white;
 border: 1px solid #C6D2D9;
-height:auto;
-}
-#main>div{
-display: flex !important;
-height:60px; 
-border: 1px solid red;
-
 }
 
+#main>div:nth-child(1){
+    display: flex;
+    align-items: top !important;
+justify-content: left;
+padding:0px !important;
+margin:0px !important;
+}
 .input{
 width:85%;
 padding: 10.5px 8.5px;
-border: 1px solid red;
-
+height:100%;
 }
 .input input{
 width:100%;
@@ -93,26 +95,13 @@ outline-style: solid;
 outline-color: #C6D2D9;
 padding: 0.608rem 0.75rem;
 }
-.project{
-display: flex;
-width:10%;
-align-items: center;
-justify-content: left;
-gap: 10px;
-color: #03a9f4;
-border: 1px solid red;
-height:50px; 
-margin:none;
-}
-.project>img{
-height: 19px;
-width:21px;
-}
 
-.main>div:nth-child(2){
+
+#main>div:nth-child(2){
 border-top: 1px solid #C6D2D9;
+display: flex;
 }
-.main>div:nth-child(2)>div{
+#main>div:nth-child(2)>div{
 display: flex;
 align-items: center;
 justify-content: center;
@@ -155,5 +144,11 @@ font-size: .75rem;
 border-radius: 2px;
 color: white;
 background-color: #f4443e;
+}
+
+
+.inputProject{
+    margin: 0 !important;
+    padding: 0 !important;
 }
 `

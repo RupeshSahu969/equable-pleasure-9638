@@ -1,3 +1,5 @@
+import { Box, Heading, HStack } from "@chakra-ui/react";
+import { Title } from "chart.js";
 import format from "date-fns/format";
 import getDay from "date-fns/getDay";
 import parse from "date-fns/parse";
@@ -48,12 +50,10 @@ function Calendr() {
     }
 
     return (
-        <div className="calendar">
-            <h1>Calendar</h1>
-            
-            
-            <Calendar localizer={localizer} events={allEvents} startAccessor="start" endAccessor="end" style={{ height: 700, margin: "70px",fontSize:"20px" }} />
-        </div>
+        <Box p="1%" >
+            <Heading size="md" textAlign="center" >Calendar</Heading>
+            <Calendar localizer={localizer} events={allEvents} startAccessor="start" endAccessor="end" style={{ height: "700px", margin: "70px",fontSize:"20px" }} />
+        </Box>
     );
 }
 
