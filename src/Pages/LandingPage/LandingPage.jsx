@@ -11,9 +11,7 @@ import {
   useColorModeValue,
   Box,
   Center,
-  chakra,
   Grid,
-  Link,
   Divider,
 } from '@chakra-ui/react';
 
@@ -39,19 +37,9 @@ const LandingPage = () => {
   
   return (
     <div id={styles.whole}>
-<<<<<<< HEAD
-      {/* <div style={{
-        width:"70%",
-        margin:"auto",
-        padding:"10px"
-      }} >
-        <NavbarLanding/>
-      </div> */}
-=======
       <div  >
         {/* <NavbarLanding/> */}
       </div>
->>>>>>> e1988e3b318afb725b1fe4013dc7a6a93ca88855
 
       <div>
        <h1 id={styles.heading}>
@@ -91,18 +79,12 @@ const LandingPage = () => {
       </Stack>
 
       <Stack mt={10} >
-<<<<<<< HEAD
-        <Center>
-        <ReactPlayer playing={true} light='https://clockify.me/assets/images/time-tracker-screenshot.svg' src='https://clockify.me/assets/images/time-tracker-screenshot.svg' width={'1100px'} height={'600px'} controls url='https://youtu.be/NMZhFs_b0Aw'  />
-        </Center>
-=======
         {/* <Image src='https://clockify.me/assets/images/time-tracker-screenshot.svg'/> */}
         <ReactPlayer playing="false"
          light='https://clockify.me/assets/images/time-tracker-screenshot.svg' 
          src='https://clockify.me/assets/images/time-tracker-screenshot.svg'
           width={'auto'} height={'600px'}
            controls url='https://youtu.be/NMZhFs_b0Aw'  />
->>>>>>> e1988e3b318afb725b1fe4013dc7a6a93ca88855
       </Stack>
 
 

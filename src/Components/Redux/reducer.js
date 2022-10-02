@@ -11,7 +11,8 @@ const init = {
     clients: false,
     tags: false,
     settings: false,
-    arrow: false
+    arrow: false,
+    auth:false
 }
 export const reducer = (state = init, { type, payload }) => {
     switch (type) {
@@ -21,6 +22,13 @@ export const reducer = (state = init, { type, payload }) => {
                 open: payload
             }
         }
+        case types.AUTH: {
+            return {
+                ...state,
+                auth: payload
+            }
+        }
+
         case types.TRACKER: {
             return {
                 ...state,

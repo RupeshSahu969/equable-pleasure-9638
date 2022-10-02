@@ -35,3 +35,6 @@ export const activeSettings = (token) => {
 export const activeArrow = (token) => {
     return { type: types.ARROW, payload: token }
 }
+export const authFun = (token) => {
+    return { type: types.AUTH, payload: token }
+}

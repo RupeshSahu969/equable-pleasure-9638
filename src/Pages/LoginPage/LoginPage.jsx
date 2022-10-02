@@ -32,8 +32,13 @@ import {
  useToast
 } from '@chakra-ui/react';
 import { loadData } from '../../Components/utils/localStorage';
+import { useDispatch, useSelector } from 'react-redux';
+import { authFun } from '../../Components/Redux/action';
 
 export default function LoginPage() {
+
+  const dispatch = useDispatch()
+  const auth = useSelector((state) => state.auth)
 
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
@@ -41,6 +46,8 @@ export default function LoginPage() {
   const [formPassword, setformPassword] = useState('')
   const[check, setCheck] = useState(false)
   const toast = useToast()
+  // const dispatch = useDispatch()
+  // const navigate = useNavigate()
 
   const handleLogin = (e)=>{
     e.preventDefault()
@@ -68,6 +75,15 @@ export default function LoginPage() {
       setCheck(true)
       // alert('Error')
     }
+}
+
+const handleSubmitGoogle =()=>{
+  SignInWithGoogle()
+  dispatch(authFun(!auth))
+  if(!auth){
+    navigate("/tracker")
+
+  }
 }
 
   return (
@@ -153,7 +169,7 @@ export default function LoginPage() {
             <Divider bg={'#C6D2D9'}/>
           </Flex>
           <Stack>
-          <Button onClick={SignInWithGoogle} w={'full'} variant={'outline'} leftIcon={<FcGoogle />}>
+          <Button onClick={handleSubmitGoogle} w={'full'} variant={'outline'} leftIcon={<FcGoogle />}>
           <Center>
             <Text>Sign in with Google</Text>
           </Center>
