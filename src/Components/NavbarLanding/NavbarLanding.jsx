@@ -36,21 +36,60 @@ export default function NavbarLanding() {
             display={{ md: 'none' }}
             onClick={isOpen ? onClose : onOpen}
           />
-          <HStack spacing={8} alignItems={'center'}>
+          <HStack spacing={20} alignItems={'center'}>
             <Box>
                 <Link as={ReachLink} to='/' >
                     <Image src='https://clockify.me/assets/images/clockify-logo.svg'/>
                 </Link>
             </Box>
+            
             <HStack
+            
               as={'nav'}
               spacing={8}
               display={{ base: 'none', md: 'flex' }}>
-              {/* {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))} */}
               <Box>
+<<<<<<< HEAD
+                <Link fontSize={'14px'} color={'#5A6B7B'} _hover={{textDecoration:"none",color:'#03A9F4'}} as={ReachLink} to='/features' >
+                    FEATURES
+                </Link>
+              </Box>
+              <Box>
+              <Link fontSize={'14px'} color={'#5A6B7B'} _hover={{textDecoration:"none",color:'#03A9F4'}} as={ReachLink} to='/downloading' >
+                    DOWNLOAD
+                </Link>
+              </Box>
+             
+        {/* <HStack border={'1px solid red'}> */}
+       
+
+        {/* </HStack>  */}
+             
+              
+            </HStack>
+            
+          </HStack>
+          <Box>
+          <Flex justify={'right'} align={'center'}  gap={10}>
+              <Link id={styles.links} as={ReachLink} to='/login' >
+                LOG IN
+              </Link>
+              <button  onClick={()=>navigate('/signup')} id={styles.signup}>
+                SIGN UP FREE
+              </button>
+          </Flex>
+            </Box>
+           
+        </Flex>
+
+        {isOpen ? (
+          <Box pb={5} display={{ md: 'none' }}>
+            <Stack as={'nav'} spacing={4}>
+            <Box>
+                <Link as={ReachLink} to='/login' >
+=======
                 <Link as={ReachLink} to='/features' >
+>>>>>>> e1988e3b318afb725b1fe4013dc7a6a93ca88855
                     FEATURES
                 </Link>
               </Box>
@@ -59,30 +98,16 @@ export default function NavbarLanding() {
                     DOWNLOAD
                 </Link>
               </Box>
-             
-              
-            </HStack>
-          </HStack>
-          <HStack>
-          <Flex alignItems={'center'} justifyItems={'right'} gap={10}>
-            <Menu>
+              <Box>
               <Link id={styles.links} as={ReachLink} to='/login' >
                 LOG IN
               </Link>
+              </Box>
+              <Box>
               <button onClick={()=>navigate('/signup')} id={styles.signup}>
                 SIGN UP FREE
               </button>
-            </Menu>
-          </Flex>
-            </HStack>    
-        </Flex>
-
-        {isOpen ? (
-          <Box pb={5} display={{ md: 'none' }}>
-            <Stack as={'nav'} spacing={4}>
-              {/* {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))} */}
+              </Box>
             </Stack>
           </Box>
         ) : null}

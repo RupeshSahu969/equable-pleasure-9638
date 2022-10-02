@@ -1,7 +1,7 @@
 #whole{
    
-    border: 1px solid red;
-    padding:10px 110px;
+    /* border: 1px solid red; */
+    /* padding:10px 110px; */
     margin: auto;
     /* width: 85%; */
     text-align:center;
@@ -101,7 +101,7 @@
     padding-left: 50px;
     cursor: pointer;
     text-align: left;
-    width: 80%;
+    /* width: 80%; */
     margin: auto;
     box-shadow: 0 2px 6px 0 rgb(1 87 155 / 15%);
     border-radius: 3px;

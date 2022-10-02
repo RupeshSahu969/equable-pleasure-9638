@@ -5,7 +5,8 @@ import { DrawerMenu } from '../Components/DrawerMenu'
 import { InnerNavbar } from '../Components/InnerNavbar'
 import Calendr from './Calendar'
 import Dashboard from './Dashboard/Dashboard'
-import Reports from './Reports/Reports'
+import Projects from './Projects/Projects'
+
 import Team from './Team/Team'
 import { Tracker } from './Tracker/Tracker'
 
@@ -14,14 +15,15 @@ export const InnerMainRoute = () => {
         <>
             <InnerNavbar />
             <FlexStyled>
-                <div><DrawerMenu /></div>
-                <div>
+                <div className={'menu'}><DrawerMenu /></div>
+                <div className='innerComp'>
                     <Routes>
                         <Route path={'/tracker'} element={<Tracker />} />
                         <Route path={'/calendar'} element={<Calendr />} />
                         <Route path='/dashboard' element={<Dashboard />} />
-                        <Route path='/reports' element={<Reports />} />
+                        {/* <Route path='/reports' element={} /> */}
                         <Route path='/team' element={<Team />} />
+                        <Route path='/projects' element={<Projects />} />
                         {/* <Route path='*' element={<h1>404 page not found</h1>} /> */}
                     </Routes>
                 </div>
@@ -32,4 +34,11 @@ export const InnerMainRoute = () => {
 
 const FlexStyled = styled.div`
 display: flex;
+.menu{
+    width:auto;
+}
+.innerComp{
+    width:100%;
+    height:auto;
+}
 `

@@ -1,56 +1,70 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import styled from 'styled-components';
+import { activeArrow, activeCalendar, activeClients, activeDashboard, activeProjects, activeReports, activeSettings, activeTags, activeTeam, activeTracker } from './Redux/action';
 
 export const InnerSidebarMini = () => {
+    const dispatch = useDispatch()
+    const tracker = useSelector((state) => state.tracker)
+    const calendar = useSelector((state) => state.calendar)
+    const dashboard = useSelector((state) => state.dashboard)
+    const reports = useSelector((state) => state.reports)
+    const projects = useSelector((state) => state.projects)
+    const team = useSelector((state) => state.team)
+    const clients = useSelector((state) => state.clients)
+    const tags = useSelector((state) => state.tags)
+    const settings = useSelector((state) => state.settings)
+    const arrow = useSelector((state) => state.arrow)
+
     return (
         <InnerSidebarStyled>
             <div id='main'>
-                <div>
+                <div className={`animate ${tracker === true ? 'blue' : ''}`} onClick={() => dispatch(activeTracker('tracker'))}>
                     <span>
                         <img src="https://app.clockify.me/assets/nav-icons/time-tracker.svg" alt="tracker" />
                     </span>
                 </div>
-                <div>
+                <div className={`animate ${calendar === true ? 'blue' : ''}`} onClick={() => dispatch(activeCalendar('calendar'))}>
                     <span>
                         <img src="https://app.clockify.me/assets/nav-icons/calendar.svg" alt="Calendar" />
                     </span>
                 </div>
-                <div>
+                <div className={`animate ${dashboard === true ? 'blue' : ''}`} onClick={() => dispatch(activeDashboard('dashboard'))}>
                     <span>
                         <img src="https://app.clockify.me/assets/nav-icons/dashboard.svg" alt="Dashboard" />
                     </span>
                 </div>
-                <div>
+                <div className={`animate ${reports === true ? 'blue' : ''}`} onClick={() => dispatch(activeReports('reports'))}>
                     <span>
                         <img src="https://app.clockify.me/assets/nav-icons/reports.svg" alt="Reports" />
                     </span>
                 </div>
-                <div>
+                <div className={`animate ${projects === true ? 'blue' : ''}`} onClick={() => dispatch(activeProjects('projects'))}>
                     <span>
                         <img src="https://app.clockify.me/assets/nav-icons/projects.svg" alt="Projects" />
                     </span>
                 </div>
-                <div>
+                <div className={`animate ${team === true ? 'blue' : ''}`} onClick={() => dispatch(activeTeam('team'))}>
                     <span>
                         <img src="https://app.clockify.me/assets/nav-icons/teams.svg" alt="Team" />
                     </span>
                 </div>
-                <div>
+                <div className={`animate ${clients === true ? 'blue' : ''}`} onClick={() => dispatch(activeClients('clients'))}>
                     <span>
                         <img src="https://app.clockify.me/assets/nav-icons/clients.svg" alt="Clients" />
                     </span>
                 </div>
-                <div>
+                <div className={`animate ${tags === true ? 'blue' : ''}`} onClick={() => dispatch(activeTags('tags'))}>
                     <span>
                         <img src="https://app.clockify.me/assets/nav-icons/tags.svg" alt="Tags" />
                     </span>
                 </div>
-                <div>
+                <div className={`animate ${settings === true ? 'blue' : ''}`} onClick={() => dispatch(activeSettings('settings'))}>
                     <span>
                         <img src="https://app.clockify.me/assets/nav-icons/settings.svg" alt="Settings" />
                     </span>
                 </div>
-                <div>
+                <div className={`animate ${arrow === true ? 'blue' : ''}`} onClick={() => dispatch(activeArrow('arrow'))}>
                     <span>
                         <img src="https://app.clockify.me/assets/ui-icons/chevron-down.svg" alt="arrow" />
                     </span>
@@ -85,7 +99,7 @@ const InnerSidebarStyled = styled.div`
             }
 
         }
-#main>div{
+.animate{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -112,4 +126,7 @@ const InnerSidebarStyled = styled.div`
     }
 }
 
+.blue{
+    background-color: #bcc8cf;
+}
 ` 

@@ -33,7 +33,7 @@ export const Tracker = () => {
 
     return (
         <TimeStyled>
-            <div className='main'>
+            <div id='main'>
                 <div>
                     <div className='input'>
                         <input type="text" placeholder='What are you working on?' />
@@ -61,22 +61,30 @@ export const Tracker = () => {
     )
 }
 
-const TimeStyled = styled.div`    
+const TimeStyled = styled.div`   
 background-color: #f2f6f8;
 width: 100%;
 box-sizing: border-box;
-.main{
+border-top: 1px solid #C6D2D9;
+height:auto;
+#main{
 margin: 40px 20px 10px 20px;
 background-color: white;
 border: 1px solid #C6D2D9;
+height:auto;
 }
-.main>div{
-display: flex;
+#main>div{
+display: flex !important;
+height:60px; 
+border: 1px solid red;
+
 }
 
 .input{
-width:90%;
+width:85%;
 padding: 10.5px 8.5px;
+border: 1px solid red;
+
 }
 .input input{
 width:100%;
@@ -92,6 +100,9 @@ align-items: center;
 justify-content: left;
 gap: 10px;
 color: #03a9f4;
+border: 1px solid red;
+height:50px; 
+margin:none;
 }
 .project>img{
 height: 19px;
