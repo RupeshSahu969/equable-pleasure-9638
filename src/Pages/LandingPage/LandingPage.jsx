@@ -7,41 +7,45 @@ import {
   Heading,
   Text,
   Stack,
-  StackDivider,
   Icon,
   useColorModeValue,
-  Button,
   Box,
   Center,
-} from '@chakra-ui/react';
-import {
-  VStack,
-  Divider,
   chakra,
   Grid,
-  GridItem,
+  Link,
+  Divider,
 } from '@chakra-ui/react';
 
+import { Link as ReachLink, useNavigate } from 'react-router-dom';
 
+import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import {BiTargetLock} from "react-icons/bi"
 import {HiOutlineArrowNarrowRight} from "react-icons/hi"
- import {AiOutlineDollarCircle} from "react-icons/ai"
- import {RiTeamLine} from "react-icons/ri"
- import { BsClockHistory } from "react-icons/bs"
+import {AiOutlineDollarCircle,AiFillLinkedin,AiFillFacebook} from "react-icons/ai"
+import {RiTeamLine} from "react-icons/ri"
+import { BsClockHistory,BsGlobe } from "react-icons/bs"
 import {GiCheckMark} from "react-icons/gi"
 
 import React from 'react'
 import NavbarLanding from '../../Components/NavbarLanding/NavbarLanding'
 import styles from "./LandingPage.module.css"
 import ReactPlayer from "react-player"
+import Footer from '../../Components/Footer/Footer';
+
 
 const LandingPage = () => {
+  const navigate=useNavigate()
   
   return (
     <div id={styles.whole}>
-      <div  >
+      {/* <div style={{
+        width:"70%",
+        margin:"auto",
+        padding:"10px"
+      }} >
         <NavbarLanding/>
-      </div>
+      </div> */}
 
       <div>
        <h1 id={styles.heading}>
@@ -62,7 +66,7 @@ const LandingPage = () => {
       </div>
 
       <div>
-          <button id={styles.itsFree}>
+          <button onClick={()=>navigate('/signup')} id={styles.itsFree}>
             start tracking time-it's free!
           </button>
           <div className={styles.belowButton}>
@@ -77,13 +81,15 @@ const LandingPage = () => {
       </div>
 
       <Stack marginTop={8} >
-        <Image src='https://clockify.me/assets/images/customers-light-gray-3.svg' />
+        <Image w={'80%'} m={'auto'} src='https://clockify.me/assets/images/customers-light-gray-3.svg' />
       </Stack>
 
       <Stack mt={10} >
-        {/* <Image src='https://clockify.me/assets/images/time-tracker-screenshot.svg'/> */}
-        <ReactPlayer playing="false" light='https://clockify.me/assets/images/time-tracker-screenshot.svg' src='https://clockify.me/assets/images/time-tracker-screenshot.svg' width={'auto'} height={'600px'} controls url='https://youtu.be/NMZhFs_b0Aw'  />
+        <Center>
+        <ReactPlayer playing={true} light='https://clockify.me/assets/images/time-tracker-screenshot.svg' src='https://clockify.me/assets/images/time-tracker-screenshot.svg' width={'1100px'} height={'600px'} controls url='https://youtu.be/NMZhFs_b0Aw'  />
+        </Center>
       </Stack>
+
 
       <Stack mt={20}>
         <Text color='#3D4853' fontSize={'34px'} >
@@ -253,19 +259,21 @@ const LandingPage = () => {
     </Container>
 
     <Stack marginTop={'80px'}>
-    <button id={styles.featureBtn} >
-            SEE ALL FEATURES
+      <button
+        
+      id={styles.featureBtn} >
+              SEE ALL FEATURES
           </button>
     </Stack>
-{/* <Stack border={'1px solid red'}> */}
+
     <Text  marginTop={'150px'} color='#3D4853' fontSize={'34px'} >
-    Time tracking apps
-        </Text>
-        <Text fontSize={'1.315rem'} textAlign={'center'} color={'#5A6B7B'}  >
+      Time tracking apps
+    </Text>
+      <Text fontSize={'1.315rem'} textAlign={'center'} color={'#5A6B7B'}  >
         Clockify works across devices. Track time from anywhere — all <br /> data is synced online.
       </Text>
       
-{/* <Stack bg={'#F7FCFF'} border={'1px red solid'} > */}
+<Stack bgColor={'#F7FCFF'}>
     <Container maxW={'5xl'}  py={12}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
       <Stack>
@@ -304,7 +312,7 @@ const LandingPage = () => {
         
       </SimpleGrid>
     </Container>
-{/* <Center> */}
+<Center>
     <Container bg={'#F7FCFF'} maxW={'5xl'} py={12}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
       <Stack>
@@ -340,10 +348,8 @@ const LandingPage = () => {
         
       </SimpleGrid>
     </Container>
-    {/* </Center> */}
-    {/* </Stack> */}
-    {/* </Stack> */}
-
+    </Center>
+    </Stack>
     
    <Heading fontWeight={'normal'} marginTop={'150px'} marginBottom={'50px'} color={'#3D4853'} fontSize={'34px'} >Why track time with Clockify </Heading>
      
@@ -397,6 +403,7 @@ const LandingPage = () => {
                    <Icon marginTop={'5px'} as={HiOutlineArrowNarrowRight}/>
                   </Flex>
              </Box>
+             
             </SimpleGrid>
       </Container>
     
@@ -424,12 +431,15 @@ const LandingPage = () => {
       {/* </SimpleGrid> */}
     </Stack>
 
-    
-    <Container  padding={40}  margin={'auto'} maxW={'5xl'} py={12}>
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={5}>
-      <Flex  >
+    <Stack bgColor={'#F7FCFF'} >
+      <Center>
+    <Container  align={'center'}    margin={'auto'} maxW={'4xl'} py={12}>
+      <SimpleGrid textAlign={'center'} columns={{ base: 1, md: 2, sm:1 }} spacing={3}>
+      <Flex b >
           <Image
-          w={'full'}
+          // w={'auto'}
+          
+          margin={'auto'}
             rounded={'md'}
             alt={'feature image'}
             src={
@@ -438,13 +448,14 @@ const LandingPage = () => {
             objectFit={'cover'}
           />
         </Flex>
-        <Stack pl={50} textAlign={'left'}  pt={20} spacing={1}>
+
+        <Stack pl={10}   textAlign={'left'}  pt={20} spacing={1}>
         <Text mb={'-25px'} fontSize={'72px'} fontWeight={'bold'} color={'#03A9F4;'} >FREE</Text>
         <Text  fontSize={'36px'} fontWeight={'bold'} color={'#03A9F4'}>FOREVER!</Text>
         <Box>
-          <Text><Icon color={'#03A9F4;'} as={GiCheckMark}/> <sapn style={{color:"#5A6B7B", fontSize:"18px"}} >Unlimited users</sapn></Text>
-          <Text><Icon color={'#03A9F4;'} as={GiCheckMark}/> <sapn style={{color:"#5A6B7B", fontSize:"18px"}} >Unlimited tracking</sapn></Text>
-          <Text><Icon color={'#03A9F4;'} as={GiCheckMark}/> <sapn style={{color:"#5A6B7B", fontSize:"18px"}} >Unlimited projects</sapn></Text>
+          <Text><Icon color={'#03A9F4;'} as={GiCheckMark}/> <span style={{color:"#5A6B7B", fontSize:"18px"}} >Unlimited users</span></Text>
+          <Text><Icon color={'#03A9F4;'} as={GiCheckMark}/> <span style={{color:"#5A6B7B", fontSize:"18px"}} >Unlimited tracking</span></Text>
+          <Text><Icon color={'#03A9F4;'} as={GiCheckMark}/> <span style={{color:"#5A6B7B", fontSize:"18px"}} >Unlimited projects</span></Text>
         </Box>
         <Box>
         <Flex cursor={'pointer'} marginTop={'10px'}  color={'#03A9F4'}  gap={'1'} justify='left' align={'center'}>
@@ -456,10 +467,18 @@ const LandingPage = () => {
        
       </SimpleGrid>
     </Container>
+    </Center>
+    </Stack>
 
     <Box as={Container} maxW="7xl" mt={14} p={4}>
+
+      <Stack mb={20}>
+        <Text color={'#78909C'} fontSize={'12px'} >#1 SUPPORT IN SOFTWARE</Text>
+        <Heading fontWeight={'normal'} color={'#3D4853'} fontSize={'34px'} >World-class customer support</Heading>
+        <Heading fontWeight={'normal'} fontSize={'1.315rem'} color={'#5A6B7B'}>We're here 24 hours a day, every day of the week, including holidays.</Heading>
+      </Stack>
      
-      <Divider mt={12} mb={12} />
+      {/* <Divider mt={12} mb={12} /> */}
       <Center>
       <Grid
         templateColumns={{
@@ -468,46 +487,109 @@ const LandingPage = () => {
           md: 'repeat(4, 150px)',
         }}
         gap={{ base: '8', sm: '12', md: '16' }}>
-     <Flex border={'1px solid red'}>
-      <Image boxSize={10} border={'1px red solid'} src='https://clockify.me/assets/images/support-phone.svg'  />
+     <Flex >
+      <Image boxSize={7}  src='https://clockify.me/assets/images/support-phone.svg'  />
 
-        <Box  textAlign={'left'} display={'block'} maxW={'135px'} color={'#78909C'} fontSize={'14px'} >
+        <Box mt={'-8px'} ml={'5px'} textAlign={'left'} display={'block'} maxW={'135px'} color={'#78909C'} fontSize={'14px'} >
           <Box fontSize={'28px'} color={'#3D4853'}>24/7</Box>
-          <Box>support anytime, anywhere</Box>
+          <Box mt={'-10px'} >support anytime, anywhere</Box>
         </Box>
      </Flex>
 
-     <Flex border={'1px solid red'}>
-      <Image boxSize={10} border={'1px red solid'} src='https://clockify.me/assets/images/support-phone.svg'  />
+     <Flex >
+      <Image boxSize={7}  src='https://clockify.me/assets/images/support-mail.svg'  />
 
-        <Box  textAlign={'left'} display={'block'} maxW={'135px'} color={'#78909C'} fontSize={'14px'} >
-          <Box fontSize={'28px'} color={'#3D4853'}>24/7</Box>
-          <Box>support anytime, anywhere</Box>
-        </Box>
-     </Flex>
-
-      <Flex border={'1px solid red'}>
-      <Image boxSize={10} border={'1px red solid'} src='https://clockify.me/assets/images/support-phone.svg'  />
-
-        <Box  textAlign={'left'} display={'block'} maxW={'135px'} color={'#78909C'} fontSize={'14px'} >
-          <Box fontSize={'28px'} color={'#3D4853'}>24/7</Box>
-          <Box>support anytime, anywhere</Box>
+        <Box mt={'-8px'} ml={'5px'} textAlign={'left'} display={'block'} maxW={'135px'} color={'#78909C'} fontSize={'14px'} >
+          <Box fontSize={'28px'} color={'#3D4853'}>1h</Box>
+          <Box mt={'-10px'} >average response time</Box>
         </Box>
      </Flex>
      
-     <Flex border={'1px solid red'}>
-      <Image boxSize={10} border={'1px red solid'} src='https://clockify.me/assets/images/support-phone.svg'  />
+     <Flex >
+      <Image boxSize={7}  src='https://clockify.me/assets/images/support-heart.svg'  />
 
-        <Box  textAlign={'left'} display={'block'} maxW={'135px'} color={'#78909C'} fontSize={'14px'} >
-          <Box fontSize={'28px'} color={'#3D4853'}>24/7</Box>
-          <Box>support anytime, anywhere</Box>
+        <Box mt={'-8px'} ml={'5px'} textAlign={'left'} display={'block'} maxW={'135px'} color={'#78909C'} fontSize={'14px'} >
+          <Box fontSize={'28px'} color={'#3D4853'}>95%</Box>
+          <Box mt={'-10px'} >satisfaction score (12k+ ratings)</Box>
         </Box>
      </Flex>
+
+     <Flex >
+      <Image boxSize={7}  src='https://clockify.me/assets/images/support-uptime.svg'  />
+
+        <Box mt={'-8px'} ml={'5px'} textAlign={'left'} display={'block'} maxW={'135px'} color={'#78909C'} fontSize={'14px'} >
+          <Box fontSize={'28px'} color={'#3D4853'}>99.99%</Box>
+          <Box mt={'-10px'} >highest uptime levels</Box>
+        </Box>
+     </Flex>
+
       </Grid>
       </Center>
     </Box>
+
     
-   
+    <Center>
+      <Stack>
+        <button className={styles.imgBtn} style={{width:"170px",marginBottom:"-1px" }} >Contact us</button>
+        <Text color={'#78909C'} fontSize={'12px'} >EMAIL • PHONE • CHAT</Text>
+      </Stack>
+    </Center>
+
+    {/* <Divider color={'blue'} mt={20} mb={20} /> */}
+
+    {/* <div style={{
+      marginBottom: "6rem",
+    marginTop:"6rem",
+    backgroundColor:"#E8EDF0",
+    border:"1px solid #E8EDF0",
+    width:"100%"
+    }} >
+    </div> */}
+    <Divider mt={59} mb={50}  />
+
+<Stack pt={'100px'} pb={'100px'} bg={'#F7FCFF'}>
+<Center >
+    <Stack  textAlign={'center'}>
+      <Heading mb={4} fontWeight={'normal'} color={'#3D4853'} fontSize={'34px'} >Start tracking time with Clockify</Heading>
+      <Flex  marginLeft={'auto'} marginRight={'auto'} align={'center'} justify={'space-between'} maxW={'450px'}  fontSize={'15px'} color={'#5A6B7B'} >
+        <Box>24/7 Support</Box>
+        <Box>•</Box>
+        <Box>Cancel Anytime</Box>
+        <Box>•</Box>
+        <Box>Free Forever</Box>
+        
+        {/* 24/7 Support • Cancel Anytime • Free Forever  */}
+        </Flex>
+    </Stack>
+    </Center>
+
+    <div style={{
+      marginTop:"20px",backgroundColor:"#F7FCFF"
+    }} >
+          <button onClick={()=>navigate('/signup')} id={styles.itsFree}>
+            CREATE FREE ACCOUNT
+          </button>
+          <div className={styles.belowButton}>
+            <div>
+            <img src="https://clockify.me/assets/images/signed-up-icon.svg" alt="" />
+
+            </div>
+            <div>
+            <p>146,072 people signed up last month</p>
+            </div>
+          </div>
+      </div>
+      </Stack>
+
+      
+
+{/* 
+      <Stack mb={'40px'} >
+        <Footer />
+      </Stack> */}
+
+
+    
     </div>
   )
 }
@@ -525,40 +607,5 @@ const Feature = ({ text, smallText }) => {
     </Stack>
   );
 };
-
-
-
-
-
- 
-const StatsText = ({ children }) => (
-  <Text as={'span'} fontWeight={700} color={'white'}>
-    {children}
-  </Text>
-);
-
-
-
-
-
-
-
-// const Contents= ({ heading, text }) => {
-//   return (
-//     <GridItem>
-//       <chakra.h3 fontSize="xl" fontWeight="600">
-//         {heading}
-//       </chakra.h3>
-//       <chakra.p>{text}</chakra.p>
-//     </GridItem>
-//   );
-// };
-
-// export default function gridListWithCTA() {
-//   return (
-   
-//   );
-// }
-
 
 

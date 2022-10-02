@@ -18,19 +18,21 @@ import {
   Checkbox,
   Divider,
   Center,
-  Heading,
+  useToast
 } from '@chakra-ui/react';
 import { useState } from 'react';
 // import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import { AiOutlineEye,AiOutlineEyeInvisible } from "react-icons/ai"
 import { Icon } from '@chakra-ui/react'
 import { saveData } from '../../Components/utils/localStorage';
+import { SignInWithGoogle } from '../../Components/utils/Firebase';
 
 
 export default function SignUpPage() {
   const [formEmail, setformEmail] = useState("")
   const [formPassword, setformPassword] = useState('')
   const navigate = useNavigate()
+  const toast = useToast()
 
 
   const [showPassword, setShowPassword] = useState(false);
@@ -42,6 +44,12 @@ export default function SignUpPage() {
     // console.log(formEmail, formPassword)
     saveData("email", formEmail)
     saveData("password" , formPassword)
+    toast({
+      position: 'bottom-right',
+      status: 'success',
+      description:"SignUp Success",
+      isClosable: true,
+    })
     setformPassword('')
     setformEmail('')
     navigate('/login')
@@ -60,7 +68,7 @@ export default function SignUpPage() {
       
       // border={'1px solid red'}
       >
-         <Flex py={6} px={12} w={'full'} gap={20} justify={'space-between'}>
+         {/* <Flex py={6} px={12} w={'full'} gap={20} justify={'space-between'}>
        <Stack>
         <Link as={ReachLink} to="/">
         <Image src="https://app.clockify.me/assets/logo.svg" alt="" />
@@ -70,7 +78,21 @@ export default function SignUpPage() {
        <Stack>
          <Link color={'#03a9f4'} _hover={'textDecoration:none '} as={ReachLink} to='/Login'> Log In </Link>
        </Stack>
-      </Flex>
+      </Flex> */}
+      
+      {/* <Box px={4}> */}
+        <Flex mt={8} w={'full'} h={16} alignItems={'center'} justifyContent={'space-between'}>
+          <Box> <Link as={ReachLink} to="/">
+        <Image src="https://app.clockify.me/assets/logo.svg" alt="" />
+        
+        </Link></Box>
+
+          <Flex alignItems={'center'}>
+          <Link color={'#03a9f4'} _hover={'textDecoration:none '} as={ReachLink} to='/Login'> Log In </Link>
+          </Flex>
+        </Flex>
+      {/* </Box> */}
+ 
 
       <Stack align={'center'} spacing={8} mx={'auto'} maxW={'auto'} py={12} px={6}>
     
@@ -150,7 +172,7 @@ export default function SignUpPage() {
           </Flex>
           
           <Stack>
-          <Button w={'full'} variant={'outline'} leftIcon={<FcGoogle />}>
+          <Button onClick={SignInWithGoogle} w={'full'} variant={'outline'} leftIcon={<FcGoogle />}>
           <Center>
             <Text>Sign in with Google</Text>
           </Center>
@@ -164,3 +186,9 @@ export default function SignUpPage() {
     </Stack>
   );
 }
+
+
+
+
+
+

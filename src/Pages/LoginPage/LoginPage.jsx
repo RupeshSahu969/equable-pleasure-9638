@@ -3,11 +3,12 @@ import styles from "./LoginPage.module.css"
 import { Link as ReachLink, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 
+import { SignInWithGoogle } from '../../Components/utils/Firebase';
+
 import {
   Flex,
   Box,
   FormControl,
-
   Input,
   InputGroup,
   InputRightElement,
@@ -20,41 +21,52 @@ import {
   Divider,
   Center,
 } from '@chakra-ui/react';
-import {
-  Alert,
-  AlertIcon,
-  AlertTitle,
-  AlertDescription,
-} from '@chakra-ui/react'
+
 import { useState } from 'react';
-// import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+
 import { AiOutlineEye,AiOutlineEyeInvisible } from "react-icons/ai"
 import { Icon } from '@chakra-ui/react'
 
 import {
   Image,
- 
+ useToast
 } from '@chakra-ui/react';
 import { loadData } from '../../Components/utils/localStorage';
 
 export default function LoginPage() {
+
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [formEmail, setformEmail] = useState("")
   const [formPassword, setformPassword] = useState('')
   const[check, setCheck] = useState(false)
+  const toast = useToast()
 
   const handleLogin = (e)=>{
     e.preventDefault()
     const localEmail = loadData("email")
     const localPassword = loadData("password")
-    if(localEmail=== formEmail && localPassword===formPassword){
+   
+  if(localEmail=== formEmail && localPassword===formPassword){
       setCheck(false)
+      toast({
+        position: 'bottom-right',
+        status: 'success',
+        description:"Logged In Successfull",
+        isClosable: true,
+      })
       navigate('/')
     }
+    
     else{
+      toast({
+        position: 'bottom-right',
+        status: 'error',
+        description:"Error Loggin In",
+        isClosable: true,
+      })
       setCheck(true)
-      alert('Error')
+      // alert('Error')
     }
 }
 
@@ -141,7 +153,7 @@ export default function LoginPage() {
             <Divider bg={'#C6D2D9'}/>
           </Flex>
           <Stack>
-          <Button w={'full'} variant={'outline'} leftIcon={<FcGoogle />}>
+          <Button onClick={SignInWithGoogle} w={'full'} variant={'outline'} leftIcon={<FcGoogle />}>
           <Center>
             <Text>Sign in with Google</Text>
           </Center>

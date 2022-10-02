@@ -14,9 +14,22 @@ import Window from "./Window"
 import Downloding from "./Downloding"
 import Features from "./Features"
 import Calendr from './Calendar'
+import NavbarLanding from '../Components/NavbarLanding/NavbarLanding'
+import Footer from '../Components/Footer/Footer'
+import { Stack } from '@chakra-ui/react'
 
 const MainRoute = () => {
   return (
+    <div>
+      <div style={{
+        // border:"1px solid red",
+        width:"80%",
+        margin:"auto",
+        paddingTop:"10px"
+      }} >
+      <NavbarLanding/>
+
+      </div>
     <Routes>
         <Route path={'/'} element={<LandingPage/> } />
         <Route path={'/login'} element={<LoginPage/>} />
@@ -29,13 +42,17 @@ const MainRoute = () => {
         <Route path='/linux' element={<Linux/>} />
         <Route path='/window' element={<Window/>} />
         <Route path='/mac' element={<Mac/>} />
-        <Route path='calendar' element={<Calendr/>}  />
-        <Route path='features' element={<Features/>} />
-        <Route path='downloding' element={<Downloding/>} />
-
-
-
+        <Route path='/calendar' element={<Calendr/>}  />
+        <Route path='/features' element={<Features/>} />
+        <Route path='/downloading' element={<Downloding/>} />
     </Routes>
+    
+    <Stack mb={'40px'} >
+        <Footer />
+      </Stack>
+    
+    </div>
+
   )
 }
 
