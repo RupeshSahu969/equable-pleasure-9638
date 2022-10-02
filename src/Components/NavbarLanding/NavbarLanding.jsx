@@ -49,6 +49,7 @@ export default function NavbarLanding() {
               spacing={8}
               display={{ base: 'none', md: 'flex' }}>
               <Box>
+<<<<<<< HEAD
                 <Link fontSize={'14px'} color={'#5A6B7B'} _hover={{textDecoration:"none",color:'#03A9F4'}} as={ReachLink} to='/features' >
                     FEATURES
                 </Link>
@@ -86,11 +87,14 @@ export default function NavbarLanding() {
             <Stack as={'nav'} spacing={4}>
             <Box>
                 <Link as={ReachLink} to='/login' >
+=======
+                <Link as={ReachLink} to='/features' >
+>>>>>>> e1988e3b318afb725b1fe4013dc7a6a93ca88855
                     FEATURES
                 </Link>
               </Box>
               <Box>
-              <Link as={ReachLink} to='/login' >
+              <Link as={ReachLink} to='/downloding' >
                     DOWNLOAD
                 </Link>
               </Box>

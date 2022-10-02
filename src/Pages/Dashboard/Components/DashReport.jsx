@@ -1,14 +1,16 @@
 import { Box, Center, Flex, HStack, Select, Spacer, Stack, Text, VStack } from '@chakra-ui/react';
 import React from 'react';
+import { Chart } from './Chart';
+import { DoughnutChart } from './DoughnutChart';
 
 const DashReport = () => {
   return (
-    <div style={{ padding: "1%"}}  >
+    <div style={{ padding: "1%" }}  >
       <Stack direction={{ base: "column", md: "row" }}>
         <VStack spacing="none" w={{ base: "100%", md: "80%" }} >
-          <div style={{ width: "100%", border:"1px solid #c6d2d9", height: "100px" }}>
+          <div style={{ width: "100%", border: "1px solid #c6d2d9", height: "100px" }}>
             <HStack spacing="none" bg="#c6d2d9" >
-              <div style={{ height: "100px", width: "33%"}}>
+              <div style={{ height: "100px", width: "33%" }}>
                 <Center h="100%" >
                   <VStack>
                     <Text fontSize="14px" color="#90a4ae" >Total Time</Text>
@@ -16,7 +18,7 @@ const DashReport = () => {
                   </VStack>
                 </Center>
               </div>
-              <div style={{ height: "100px", width: "34%"}}>
+              <div style={{ height: "100px", width: "34%" }}>
                 <Center h="100%" >
                   <VStack>
                     <Text fontSize="14px" color="#90a4ae" >Top Project</Text>
@@ -24,7 +26,7 @@ const DashReport = () => {
                   </VStack>
                 </Center>
               </div>
-              <div style={{ height: "100px", width: "33%"}}>
+              <div style={{ height: "100px", width: "33%" }}>
                 <Center h="100%" >
                   <VStack>
                     <Text fontSize="14px" color="#90a4ae" >Top Client</Text>
@@ -35,7 +37,14 @@ const DashReport = () => {
 
             </HStack>
           </div>
-          <div style={{ backgroundColor:"white",width: "100%", height: "500px", border:"1px solid #c6d2d9" }}></div>
+          <VStack w="100%" >
+            <div style={{ backgroundColor: "white", width: "100%", height: "500px", border: "1px solid #c6d2d9" }}>
+              <Chart />
+            </div>
+            <Flex justifyContent="flex-start" >
+              <DoughnutChart />
+            </Flex>
+          </VStack>
         </VStack>
         <Stack bg="white" border="1px solid #c6d2d9" w={{ base: "100%", md: "20%" }} >
           <Box bg={"#c6d2d9"} >

@@ -1,18 +1,15 @@
-
 import './App.css';
-// import LandingPage from './Pages/LandingPage/LandingPage';
+import { InnerMainRoute } from './Pages/InnerMainRoute';
 import MainRoute from './Pages/MainRoute';
 
-
-
-
-
 function App() {
+  let isAuth = true
   return (
     <div>
-        <MainRoute/>
-     </div>
+      {
+        !isAuth ? (<MainRoute />) : (<InnerMainRoute />)
+      }
+    </div>
   );
 }
-
 export default App;
