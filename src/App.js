@@ -1,13 +1,14 @@
+import { useSelector } from 'react-redux';
 import './App.css';
 import { InnerMainRoute } from './Pages/InnerMainRoute';
 import MainRoute from './Pages/MainRoute';
 
 function App() {
-  let isAuth = true
+  const auth = useSelector((state)=>state.auth)
   return (
     <div>
       {
-        !isAuth ? (<MainRoute />) : (<InnerMainRoute />)
+        !auth ? (<MainRoute />) : (<InnerMainRoute />)
       }
     </div>
   );

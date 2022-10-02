@@ -2,6 +2,9 @@
 import { initializeApp } from "firebase/app";
 // import { Navigate } from "react-router-dom";
 import { getAuth, GoogleAuthProvider, signInWithPopup,s } from "firebase/auth"; 
+// import { useDispatch } from "react-redux";
+// import { useNavigate } from "react-router-dom";
+// import { authFun } from "../Redux/action";
 
 const firebaseConfig = {
     apiKey: "AIzaSyATn6xKT_r5TCsyEGKbbqGElBmyqgMYb1c",
@@ -19,13 +22,18 @@ export const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 // const toast = useToast()
 
+
+
 export const SignInWithGoogle = () => {
+
+
   signInWithPopup(auth, provider)
     .then((result) => {
         console.log(result._tokenResponse)
         console.log(result._tokenResponse.email)
         console.log(result._tokenResponse.firstName)
         console.log(result._tokenResponse.photoUrl)
+       
         // window.location.href='http://localhost:3000'
     //   const name = result.user.displayName;
     //   const email = result.user.email;
