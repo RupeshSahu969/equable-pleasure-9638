@@ -31,7 +31,7 @@ const Projects = () => {
 
 
     <>
-      <Box p="5% 2%" w="100%" h="100vh" >
+      <Box bg="#f2f6f8" p="5% 2%" w="100%" h="100vh" >
         <VStack>
           <Stack w="100%" p={"1% 0"} direction={{ base: "column", sm: "row" }} >
             <Center>
