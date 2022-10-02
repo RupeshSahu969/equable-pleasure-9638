@@ -6,7 +6,7 @@ import { InnerNavbar } from '../Components/InnerNavbar'
 import Calendr from './Calendar'
 import Dashboard from './Dashboard/Dashboard'
 import Projects from './Projects/Projects'
-import Reports from './Reports/Reports'
+
 import Team from './Team/Team'
 import { Tracker } from './Tracker/Tracker'
 
@@ -21,7 +21,7 @@ export const InnerMainRoute = () => {
                         <Route path={'/tracker'} element={<Tracker />} />
                         <Route path={'/calendar'} element={<Calendr />} />
                         <Route path='/dashboard' element={<Dashboard />} />
-                        <Route path='/reports' element={<Reports />} />
+                        {/* <Route path='/reports' element={} /> */}
                         <Route path='/team' element={<Team />} />
                         <Route path='/projects' element={<Projects />} />
                         {/* <Route path='*' element={<h1>404 page not found</h1>} /> */}
