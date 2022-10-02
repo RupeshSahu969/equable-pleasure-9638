@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { activeArrow, activeCalendar, activeClients, activeDashboard, activeProjects, activeReports, activeSettings, activeTags, activeTeam, activeTracker } from './Redux/action';
 
@@ -16,20 +17,34 @@ export const InnerSidebarMini = () => {
     const settings = useSelector((state) => state.settings)
     const arrow = useSelector((state) => state.arrow)
 
+    const navigate = useNavigate();
+
     return (
         <InnerSidebarStyled>
             <div id='main'>
-                <div className={`animate ${tracker === true ? 'blue' : ''}`} onClick={() => dispatch(activeTracker('tracker'))}>
+                <div className={`animate ${tracker === true ? 'blue' : ''}`} onClick={() => {
+                    dispatch(activeTracker('tracker'))
+                    navigate("/tracker");
+
+                }}>
                     <span>
                         <img src="https://app.clockify.me/assets/nav-icons/time-tracker.svg" alt="tracker" />
                     </span>
                 </div>
-                <div className={`animate ${calendar === true ? 'blue' : ''}`} onClick={() => dispatch(activeCalendar('calendar'))}>
+                <div className={`animate ${calendar === true ? 'blue' : ''}`} onClick={() => {
+                    dispatch(activeCalendar('calendar'))
+                    navigate("/calendar")
+
+                }}>
                     <span>
                         <img src="https://app.clockify.me/assets/nav-icons/calendar.svg" alt="Calendar" />
                     </span>
                 </div>
-                <div className={`animate ${dashboard === true ? 'blue' : ''}`} onClick={() => dispatch(activeDashboard('dashboard'))}>
+                <div className={`animate ${dashboard === true ? 'blue' : ''}`} onClick={() => {
+                    dispatch(activeDashboard('dashboard'))
+                    navigate("/dashboard")
+
+                }}>
                     <span>
                         <img src="https://app.clockify.me/assets/nav-icons/dashboard.svg" alt="Dashboard" />
                     </span>
@@ -39,12 +54,20 @@ export const InnerSidebarMini = () => {
                         <img src="https://app.clockify.me/assets/nav-icons/reports.svg" alt="Reports" />
                     </span>
                 </div>
-                <div className={`animate ${projects === true ? 'blue' : ''}`} onClick={() => dispatch(activeProjects('projects'))}>
+                <div className={`animate ${projects === true ? 'blue' : ''}`} onClick={() => {
+                    dispatch(activeProjects('projects'))
+                    navigate("/projects")
+
+                }}>
                     <span>
                         <img src="https://app.clockify.me/assets/nav-icons/projects.svg" alt="Projects" />
                     </span>
                 </div>
-                <div className={`animate ${team === true ? 'blue' : ''}`} onClick={() => dispatch(activeTeam('team'))}>
+                <div className={`animate ${team === true ? 'blue' : ''}`} onClick={() => {
+                    dispatch(activeTeam('team'))
+                    navigate("/team")
+
+                }}>
                     <span>
                         <img src="https://app.clockify.me/assets/nav-icons/teams.svg" alt="Team" />
                     </span>
@@ -78,7 +101,7 @@ const InnerSidebarStyled = styled.div`
   
 #main{ 
     width:65px;
-    height:615px;
+    height:100%;
     border-right:1px solid #C6D2D9;
     box-sizing: border-box;
     position: relative;

@@ -1,3 +1,4 @@
+import { Flex, Spacer } from '@chakra-ui/react';
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 
@@ -38,10 +39,10 @@ export const Tracker = () => {
                     <div className='input'>
                         <input type="text" placeholder='What are you working on?' />
                     </div>
-                    <div className='project'>
+                    <Flex cursor="pointer" justifyContent="center" alignItems="center" >
                         <img src="https://app.clockify.me/assets/ui-icons/plus-blue.svg" alt="add" />
-                        <span>Project</span>
-                    </div>
+                        <span style={{ paddingLeft: "10px" }} >Project</span>
+                    </Flex>
                 </div>
 
                 <div>
@@ -59,12 +60,13 @@ export const Tracker = () => {
                     </div>
                 </div>
             </div>
-        </TimeStyled>
+        </TimeStyled >
     )
 }
 
 const TimeStyled = styled.div`   
 background-color: #f2f6f8;
+height:100%;
 width: 100%;
 box-sizing: border-box;
 border-top: 1px solid #C6D2D9;
@@ -93,19 +95,7 @@ outline-style: solid;
 outline-color: #C6D2D9;
 padding: 0.608rem 0.75rem;
 }
-.project{
-display: flex;
-width:10%;
-align-items: center;
-justify-content: left;
-gap: 10px;
-color: #03a9f4;
-height:100%;
-}
-.project>img{
-height: 19px;
-width:21px;
-}
+
 
 #main>div:nth-child(2){
 border-top: 1px solid #C6D2D9;
