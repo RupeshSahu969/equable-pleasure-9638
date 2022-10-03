@@ -1,7 +1,7 @@
 // import { useToast } from "@chakra-ui/react";
 import { initializeApp } from "firebase/app";
 // import { Navigate } from "react-router-dom";
-import { getAuth, GoogleAuthProvider, signInWithPopup,s } from "firebase/auth"; 
+import { getAuth, GoogleAuthProvider, signInWithPopup, } from "firebase/auth"; 
 // import { useDispatch } from "react-redux";
 // import { useNavigate } from "react-router-dom";
 // import { authFun } from "../Redux/action";
@@ -17,22 +17,23 @@ const firebaseConfig = {
   
 
 const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
+export const isAuth = getAuth(app);
 
-const provider = new GoogleAuthProvider();
+export const providers = new GoogleAuthProvider();
 // const toast = useToast()
 
 
 
-export const SignInWithGoogle = () => {
+// export const SignInWithGoogle = () => {
 
 
-  signInWithPopup(auth, provider)
+  signInWithPopup(isAuth, providers)
     .then((result) => {
         console.log(result._tokenResponse)
         console.log(result._tokenResponse.email)
         console.log(result._tokenResponse.firstName)
         console.log(result._tokenResponse.photoUrl)
+        
        
         // window.location.href='http://localhost:3000'
     //   const name = result.user.displayName;
@@ -60,4 +61,4 @@ export const SignInWithGoogle = () => {
       //   status:"error",
       // })
     });
-};
+// };

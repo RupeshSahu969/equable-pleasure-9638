@@ -10,11 +10,19 @@ import {
     Stack,
     
   } from '@chakra-ui/react';
+import NavbarLanding from '../Components/NavbarLanding/NavbarLanding';
   
 const Downloding = () => {
 
   return (
     <div className='downloding'>
+        <div style={{
+                width:"80%",
+                margin:"auto",
+                marginTop:"-50px"
+                }} >
+                <NavbarLanding />
+            </div>
 
         <div className='timer'>
             <div>

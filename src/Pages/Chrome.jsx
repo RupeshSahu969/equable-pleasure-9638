@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import NavbarLanding from '../Components/NavbarLanding/NavbarLanding'
 import "../Styles/chrome.css"
 
 
@@ -7,6 +8,13 @@ const Chrome = () => {
 
   return (
     <div className='chrome'>
+        <div style={{
+                width:"80%",
+                margin:"auto",
+                marginTop:"-50px"
+                }} >
+                <NavbarLanding/>
+            </div>
         <div>
             <div>
                 <h1>

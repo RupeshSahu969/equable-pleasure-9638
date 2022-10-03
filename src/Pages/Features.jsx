@@ -9,6 +9,7 @@ import {
     Stack,
     
   } from '@chakra-ui/react';
+import NavbarLanding from '../Components/NavbarLanding/NavbarLanding';
   
 
 
@@ -33,6 +34,13 @@ const Features = () => {
   return (
 
     <div className='features'>
+        <div style={{
+                width:"80%",
+                margin:"auto",
+                marginTop:"-50px"
+                }} >
+                <NavbarLanding/>
+            </div>
         
             <div className='pro'>
                 <h1>Features</h1>

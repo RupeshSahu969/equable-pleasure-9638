@@ -37,8 +37,12 @@ const LandingPage = () => {
   
   return (
     <div id={styles.whole}>
-      <div  >
-        {/* <NavbarLanding/> */}
+      <div style={{
+        width:"80%",
+        margin:"auto",
+        paddingTop:"10px"
+      }} >
+        <NavbarLanding/>
       </div>
 
       <div>
@@ -78,12 +82,12 @@ const LandingPage = () => {
         <Image w={'80%'} m={'auto'} src='https://clockify.me/assets/images/customers-light-gray-3.svg' />
       </Stack>
 
-      <Stack mt={10} >
+      <Stack w={'80%'} m={'auto'} mt={10} >
         {/* <Image src='https://clockify.me/assets/images/time-tracker-screenshot.svg'/> */}
         <ReactPlayer playing="false"
          light='https://clockify.me/assets/images/time-tracker-screenshot.svg' 
          src='https://clockify.me/assets/images/time-tracker-screenshot.svg'
-          width={'auto'} height={'600px'}
+         width={'auto'} height={'600px'} m={'auto'}
            controls url='https://youtu.be/NMZhFs_b0Aw'  />
       </Stack>
 
@@ -257,7 +261,7 @@ const LandingPage = () => {
 
     <Stack marginTop={'80px'}>
       <button
-        
+        onClick={()=>navigate("/features")}
       id={styles.featureBtn} >
               SEE ALL FEATURES
           </button>
@@ -284,9 +288,9 @@ const LandingPage = () => {
           />
           <Text fontWeight={'bold'} color={'#3D4853'}>Desktop</Text>
           <Flex gap={5} align={'center'} justify={'center'}>
-            <button className={styles.imgBtn} >Windows</button>
-            <button className={styles.imgBtn} >Max</button>
-            <button className={styles.imgBtn} >Linux</button>
+            <button onClick={()=>navigate("/window")} className={styles.imgBtn} >Windows</button>
+            <button onClick={()=>navigate("/Mac")} className={styles.imgBtn} >Max</button>
+            <button onClick={()=>navigate("/linux")} className={styles.imgBtn} >Linux</button>
           </Flex>
         </Stack>
         <Stack>
@@ -301,9 +305,9 @@ const LandingPage = () => {
           />
            <Text fontWeight={'bold'} color={'#3D4853'}>Desktop</Text>
           <Flex gap={5} align={'center'} justify={'center'}>
-            <button className={styles.imgBtn} >Windows</button>
-            <button className={styles.imgBtn} >Max</button>
-            <button className={styles.imgBtn} >Linux</button>
+            <button onClick={()=>navigate("/edge")} className={styles.imgBtn} >Edge</button>
+            <button onClick={()=>navigate("/chrome")} className={styles.imgBtn} >Chrome</button>
+            <button onClick={()=>navigate("/firefox")} className={styles.imgBtn} >FireFox</button>
           </Flex>
         </Stack>
         
@@ -323,8 +327,8 @@ const LandingPage = () => {
           />
           <Text fontWeight={'bold'} color={'#3D4853'}>MOBILE APP</Text>
           <Flex gap={5} align={'center'} justify={'center'}>
-            <button className={styles.imgBtn} >Android</button>
-            <button className={styles.imgBtn} >iOS</button>
+            <button onClick={()=>navigate("/android")} className={styles.imgBtn} >Android</button>
+            <button onClick={()=>navigate("/ios")} className={styles.imgBtn} >iOS</button>
           </Flex>
         </Stack>
         <Stack>
@@ -532,16 +536,7 @@ const LandingPage = () => {
       </Stack>
     </Center>
 
-    {/* <Divider color={'blue'} mt={20} mb={20} /> */}
 
-    {/* <div style={{
-      marginBottom: "6rem",
-    marginTop:"6rem",
-    backgroundColor:"#E8EDF0",
-    border:"1px solid #E8EDF0",
-    width:"100%"
-    }} >
-    </div> */}
     <Divider mt={59} mb={50}  />
 
 <Stack pt={'100px'} pb={'100px'} bg={'#F7FCFF'}>
@@ -580,10 +575,10 @@ const LandingPage = () => {
 
       
 
-{/* 
+
       <Stack mb={'40px'} >
         <Footer />
-      </Stack> */}
+      </Stack>
 
 
     

@@ -20,15 +20,14 @@ import Window from "./Window"
 const MainRoute = () => {
   return (
     <div>
-      <div style={{
-        // border:"1px solid red",
+      {/* <div style={{
         width:"80%",
         margin:"auto",
         paddingTop:"10px"
       }} >
       <NavbarLanding/>
 
-      </div>
+      </div> */}
     <Routes>
       <Route path={'/'} element={<LandingPage />} />
       <Route path={'/login'} element={<LoginPage />} />
@@ -41,14 +40,14 @@ const MainRoute = () => {
       <Route path='/linux' element={<Linux />} />
       <Route path='/window' element={<Window />} />
       <Route path='/mac' element={<Mac />} />
-      <Route path='features' element={<Features />} />
-      <Route path='downloding' element={<Downloding />} />
+      <Route path='/features' element={<Features />} />
+      <Route path='/downloding' element={<Downloding />} />
       <Route path='*' element={<h1>404 page not found</h1>} />
     </Routes>
     
-    <Stack mb={'40px'} >
+    {/* <Stack mb={'40px'} >
         <Footer />
-      </Stack>
+      </Stack> */}
     
     </div>
 

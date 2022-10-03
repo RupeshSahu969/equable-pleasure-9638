@@ -3,7 +3,7 @@ import styles from "./LoginPage.module.css"
 import { Link as ReachLink, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 
-import { SignInWithGoogle } from '../../Components/utils/Firebase';
+// import { SignInWithGoogle } from '../../Components/utils/Firebase';
 
 import {
   Flex,
@@ -34,11 +34,14 @@ import {
 import { loadData } from '../../Components/utils/localStorage';
 import { useDispatch, useSelector } from 'react-redux';
 import { authFun } from '../../Components/Redux/action';
+import { isAuth, providers } from '../../Components/utils/Firebase';
+import { signInWithPopup } from 'firebase/auth';
 
 export default function LoginPage() {
 
   const dispatch = useDispatch()
   const auth = useSelector((state) => state.auth)
+  
 
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
@@ -78,12 +81,21 @@ export default function LoginPage() {
 }
 
 const handleSubmitGoogle =()=>{
-  SignInWithGoogle()
-  dispatch(authFun(!auth))
-  if(!auth){
-    navigate("/tracker")
+  // const authing = isAuth 
+  signInWithPopup( isAuth  , providers)
+  .then((result) => {
+      console.log(result._tokenResponse)
+      console.log(result._tokenResponse.email)
+      console.log(result._tokenResponse.firstName)
+      console.log(result._tokenResponse.photoUrl)
+    dispatch(authFun(!auth))
 
-  }
+  
+  })
+  .catch((error) => {
+    console.log(error);
+   
+  });
 }
 
   return (

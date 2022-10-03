@@ -1,10 +1,18 @@
 import React from 'react'
+import NavbarLanding from '../Components/NavbarLanding/NavbarLanding'
 import mac from "../Styles/mac.css"
 
 const Linux = () => {
 
     return (
         <div className='mac'>
+            <div style={{
+                width:"90%",
+                margin:"auto",
+                marginTop:"-50px"
+                }} >
+                <NavbarLanding/>
+            </div>
             <div>
                 <div>
                     <h1>

@@ -26,7 +26,7 @@ export default function NavbarLanding() {
 
   return (
     <>
-      <Box id={styles.whole}>
+      <Box  id={styles.whole}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
@@ -38,42 +38,73 @@ export default function NavbarLanding() {
           />
           <HStack spacing={20} alignItems={'center'}>
             <Box>
-              <Link as={ReachLink} to='/' >
-                <Image src='https://clockify.me/assets/images/clockify-logo.svg' />
-              </Link>
+                <Link as={ReachLink} to='/' >
+                    <Image src='https://clockify.me/assets/images/clockify-logo.svg'/>
+                </Link>
             </Box>
-
+            
             <HStack
-
+            
               as={'nav'}
               spacing={8}
               display={{ base: 'none', md: 'flex' }}>
               <Box>
-                <Link as={ReachLink} to='/features' >
-                  FEATURES
+                <Link fontSize={'14px'} color={'#5A6B7B'} _hover={{textDecoration:"none",color:'#03A9F4'}} as={ReachLink} to='/features' >
+                    FEATURES
                 </Link>
               </Box>
               <Box>
-                <Link as={ReachLink} to='/downloding' >
-                  DOWNLOAD
+              <Link fontSize={'14px'} color={'#5A6B7B'} _hover={{textDecoration:"none",color:'#03A9F4'}} as={ReachLink} to='/downloding' >
+                    DOWNLOAD
                 </Link>
               </Box>
-              <Box>
-                <Link id={styles.links} as={ReachLink} to='/login' >
-                  LOG IN
-                </Link>
-              </Box>
-              <Box>
-                <button onClick={() => navigate('/signup')} id={styles.signup}>
-                  SIGN UP FREE
-                </button>
-              </Box>
+                         
+              
             </HStack>
+            
           </HStack>
+          <Box>
+          <Flex justify={'right'} align={'center'}  gap={10}>
+              <Link id={styles.links} as={ReachLink} to='/login' >
+                LOG IN
+              </Link>
+              <button  onClick={()=>navigate('/signup')} id={styles.signup}>
+                SIGN UP FREE
+              </button>
+          </Flex>
+            </Box>
+           
         </Flex>
+
+        {isOpen ? (
+          <Box pb={5} display={{ md: 'none' }}>
+            <Stack as={'nav'} spacing={4}>
+            <Box>
+                <Link as={ReachLink} to='/login' >
+                    FEATURES
+                </Link>
+              </Box>
+              <Box>
+              <Link as={ReachLink} to='/login' >
+                    DOWNLOAD
+                </Link>
+              </Box>
+              <Box>
+              <Link id={styles.links} as={ReachLink} to='/login' >
+                LOG IN
+              </Link>
+              </Box>
+              <Box>
+              <button onClick={()=>navigate('/signup')} id={styles.signup}>
+                SIGN UP FREE
+              </button>
+              </Box>
+            </Stack>
+          </Box>
+        ) : null}
       </Box>
 
-     
+      {/* <Box p={4}>Main Content Here</Box> */}
     </>
   );
 }

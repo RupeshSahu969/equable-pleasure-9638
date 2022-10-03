@@ -25,7 +25,11 @@ import { useState } from 'react';
 import { AiOutlineEye,AiOutlineEyeInvisible } from "react-icons/ai"
 import { Icon } from '@chakra-ui/react'
 import { saveData } from '../../Components/utils/localStorage';
-import { SignInWithGoogle } from '../../Components/utils/Firebase';
+import { useDispatch, useSelector } from 'react-redux';
+import { isAuth, providers } from '../../Components/utils/Firebase';
+import { authFun } from '../../Components/Redux/action';
+import { signInWithPopup } from 'firebase/auth';
+// import { SignInWithGoogle } from '../../Components/utils/Firebase';
 
 
 export default function SignUpPage() {
@@ -33,6 +37,8 @@ export default function SignUpPage() {
   const [formPassword, setformPassword] = useState('')
   const navigate = useNavigate()
   const toast = useToast()
+  const dispatch = useDispatch()
+  const auth = useSelector((state) => state.auth)
 
 
   const [showPassword, setShowPassword] = useState(false);
@@ -53,6 +59,24 @@ export default function SignUpPage() {
     setformPassword('')
     setformEmail('')
     navigate('/login')
+  }
+
+  const handleSubmitGoogle =()=>{
+    // const authing = isAuth 
+    signInWithPopup( isAuth  , providers)
+    .then((result) => {
+        console.log(result._tokenResponse)
+        console.log(result._tokenResponse.email)
+        console.log(result._tokenResponse.firstName)
+        console.log(result._tokenResponse.photoUrl)
+      dispatch(authFun(!auth))
+  
+    
+    })
+    .catch((error) => {
+      console.log(error);
+     
+    });
   }
 
 
@@ -172,7 +196,7 @@ export default function SignUpPage() {
           </Flex>
           
           <Stack>
-          <Button onClick={SignInWithGoogle} w={'full'} variant={'outline'} leftIcon={<FcGoogle />}>
+          <Button onClick={handleSubmitGoogle}  w={'full'} variant={'outline'} leftIcon={<FcGoogle />}>
           <Center>
             <Text>Sign in with Google</Text>
           </Center>

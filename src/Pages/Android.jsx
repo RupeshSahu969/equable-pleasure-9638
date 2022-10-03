@@ -1,10 +1,22 @@
+import { Stack } from '@chakra-ui/react'
 import React from 'react'
+import Footer from '../Components/Footer/Footer'
+import NavbarLanding from '../Components/NavbarLanding/NavbarLanding'
 import mac from "../Styles/mac.css"
 
 const Android = () => {
 
     return (
         <div className='mac'>
+             <div style={{
+                width:"80%",
+                margin:"auto",
+                marginTop:"-50px"
+                }} >
+                <NavbarLanding/>
+            </div> 
+
+
             <div>
                 <div>
                     <h1>
@@ -26,6 +38,9 @@ const Android = () => {
                     <img src='https://clockify.me/assets/images/android-time-tracker-light.png' />
                 </div>
             </div>
+            {/* <div >
+                <Footer />
+            </div> */}
     
         </div>
       )
