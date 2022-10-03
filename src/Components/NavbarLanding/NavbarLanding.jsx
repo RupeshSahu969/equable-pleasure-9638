@@ -54,7 +54,7 @@ export default function NavbarLanding() {
                 </Link>
               </Box>
               <Box>
-                <Link as={ReachLink} to='/login' >
+                <Link as={ReachLink} to='/downloding' >
                   DOWNLOAD
                 </Link>
               </Box>
