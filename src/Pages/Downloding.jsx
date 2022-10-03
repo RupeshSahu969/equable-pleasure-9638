@@ -11,6 +11,7 @@ import {
     
   } from '@chakra-ui/react';
 import NavbarLanding from '../Components/NavbarLanding/NavbarLanding';
+import Footer from '../Components/Footer/Footer';
   
 const Downloding = () => {
 
@@ -258,7 +259,7 @@ const Downloding = () => {
                 </div>
             </div>
             <div className='btn'>
-                <Link to="/">
+                <Link to="/signup">
                 <button>
                     
                     CREATE FREE ACCOUNT
@@ -267,7 +268,9 @@ const Downloding = () => {
             </div>
         </div>
 
-        
+        <Stack mt={'-100px'} mb={'40px'} >
+        <Footer />
+      </Stack>
 
     </div>
   )

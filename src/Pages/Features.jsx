@@ -10,6 +10,7 @@ import {
     
   } from '@chakra-ui/react';
 import NavbarLanding from '../Components/NavbarLanding/NavbarLanding';
+import Footer from '../Components/Footer/Footer';
   
 
 
@@ -538,14 +539,16 @@ const Features = () => {
                 </div>
             </div>
             <div className='btn'>
-                <Link to="/dashboard">
+                <Link to="/signup">
                 <button>
-                    
                     CREATE FREE ACCOUNT
                 </button>
                 </Link>
             </div>
         </div>
+        <Stack mt={'-100px'} mb={'40px'} >
+        <Footer />
+      </Stack>
         
     </div>
   )
