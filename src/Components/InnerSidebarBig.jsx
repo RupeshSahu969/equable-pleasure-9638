@@ -131,9 +131,6 @@ const InnerSidebarStyled = styled.div`
             }
 
         }
-                    @media screen and (max-width:800px){
-                        transform: translateX(-100%);
-    }
                     #main{
                         transform: translateX(0px);
                     width:197px;

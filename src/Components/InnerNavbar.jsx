@@ -8,19 +8,20 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from "react-redux"
 import styled from 'styled-components'
 import { DrawerMenu } from "./DrawerMenu"
-import { openFun } from "./Redux/action"
+import { authFun, openFun } from "./Redux/action"
 
 export const InnerNavbar = () => {
     const dispatch = useDispatch()
     const open = useSelector((state) => state.open)
+    const auth = useSelector((state) => state.auth)
 
-    
+
     return (
         <>
             <InnerNavbarStyled>
                 <div id='main'>
                     <div>
-                        <div onClick={() =>dispatch(openFun(!open))} color='red'>
+                        <div onClick={() => dispatch(openFun(!open))} color='red'>
                             <svg id='menu' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#666" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" /></svg>
                         </div>
                         <div id='logo'>
@@ -50,7 +51,7 @@ export const InnerNavbar = () => {
                                     <MenuItem borderTop={'1px solid #C6D2D9'} className='loginList'>Profile settings</MenuItem>
                                     <MenuItem className='loginList'>Download apps</MenuItem>
                                     <MenuItem className='loginList' borderBottom={'1px solid #C6D2D9'} >Try chat app</MenuItem>
-                                    <MenuItem className='loginList'>Log out</MenuItem>
+                                    <MenuItem className='loginList' onClick={() => dispatch(authFun(!auth))}>Log out</MenuItem>
                                 </MenuList>
                             </Menu>
                         </div>

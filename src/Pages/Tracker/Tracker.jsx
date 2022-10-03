@@ -10,14 +10,10 @@ const formatTimeToString = (time) => {
 };
 
 export const Tracker = () => {
-    const [show, setShow] = useState(true);
+    const [show, setShow] = useState(false);
     const [count, setCount] = useState(0);
     const timerRef = useRef(null);
     console.log(timerRef.current);
-
-    useEffect(() => {
-        return stopTimer();
-    }, []);
 
     const startTimer = () => {
         if (timerRef.current !== null) return;
@@ -31,6 +27,10 @@ export const Tracker = () => {
         timerRef.current = null;
         setShow(!show)
     };
+
+    useEffect(() => {
+        return stopTimer();
+    }, []);
 
     return (
         <TimeStyled>
