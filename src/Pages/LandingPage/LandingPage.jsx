@@ -84,7 +84,7 @@ const LandingPage = () => {
 
       <Stack w={'80%'} m={'auto'} mt={10} >
         {/* <Image src='https://clockify.me/assets/images/time-tracker-screenshot.svg'/> */}
-        <ReactPlayer playing="false"
+        <ReactPlayer playing={true}
          light='https://clockify.me/assets/images/time-tracker-screenshot.svg' 
          src='https://clockify.me/assets/images/time-tracker-screenshot.svg'
          width={'auto'} height={'600px'} m={'auto'}
