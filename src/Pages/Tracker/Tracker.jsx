@@ -1,6 +1,8 @@
-import { Flex, Spacer } from '@chakra-ui/react';
+import { Flex, HStack, Spacer, VStack } from '@chakra-ui/react';
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
+import ProjectItem from '../Projects/Components/ProjectItem';
+import TrackerItem from './TrackerItem';
 
 const fixTime = (time) => (time < 10 ? "0" + time : time);
 const formatTimeToString = (time) => {
@@ -32,14 +34,30 @@ export const Tracker = () => {
         return stopTimer();
     }, []);
 
+    const [projName, setName] = useState("")
+    const [projects, setProjects] = useState([]);
+    // console.log(projName)
+
+    const handleAddProjectItem = (count) => {
+        console.log(formatTimeToString(count))
+        let item = {
+            name: projName,
+            time: "00:05"
+        }
+        setProjects([...projects, item])
+        setName("");
+        // setCount(0);
+    }
+    // console.log(projects)
+
     return (
         <TimeStyled>
             <div id='main'>
                 <div className='inputProject'>
                     <div className='input'>
-                        <input type="text" placeholder='What are you working on?' />
+                        <input onChange={(e) => setName(e.target.value)} type="text" placeholder='What are you working on?' />
                     </div>
-                    <Flex cursor="pointer" justifyContent="center" alignItems="center" >
+                    <Flex onClick={handleAddProjectItem} cursor="pointer" justifyContent="center" alignItems="center" >
                         <img src="https://app.clockify.me/assets/ui-icons/plus-blue.svg" alt="add" />
                         <span style={{ paddingLeft: "10px" }} >Project</span>
                     </Flex>
@@ -60,6 +78,13 @@ export const Tracker = () => {
                     </div>
                 </div>
             </div>
+            <VStack m="2%" >
+                {
+                    projects.map((el) => {
+                        return <TrackerItem {...el} startTimer={startTimer} stopTimer={stopTimer} show={show} />
+                    })
+                }
+            </VStack>
         </TimeStyled >
     )
 }

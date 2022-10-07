@@ -117,8 +117,11 @@ const Projects = () => {
           <Divider />
           <ModalFooter>
             <Spacer />
-            <Button _hover={{ background: "white" }} fontWeight="medium" variant="ghost" color="#5cc7f8" onClick={onClose}>Cancel</Button>
-            <Button onClick={handleAddProj} _hover={{ background: "blue" }} borderRadius="2px" color="white" bg='#5cc7f8' mr={3}>
+            <Button _hover={{ background: "white" }} fontWeight="medium" variant="ghost" color="#5cc7f8">Cancel</Button>
+            <Button onClick={() => {
+              handleAddProj();
+              onClose();
+            }} _hover={{ background: "blue" }} borderRadius="2px" color="white" bg='#5cc7f8' mr={3}>
               ADD
             </Button>
           </ModalFooter>

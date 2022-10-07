@@ -12,7 +12,9 @@ const init = {
     tags: false,
     settings: false,
     arrow: false,
-    auth:false
+    auth: false,
+    name: "",
+    email: ""
 }
 export const reducer = (state = init, { type, payload }) => {
     switch (type) {
@@ -23,9 +25,12 @@ export const reducer = (state = init, { type, payload }) => {
             }
         }
         case types.AUTH: {
+            const { name, email, token } = payload;
             return {
                 ...state,
-                auth: payload
+                auth: token,
+                name: name,
+                email: email
             }
         }
 

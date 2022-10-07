@@ -28,27 +28,27 @@ const MainRoute = () => {
       <NavbarLanding/>
 
       </div> */}
-    <Routes>
-      <Route path={'/'} element={<LandingPage />} />
-      <Route path={'/login'} element={<LoginPage />} />
-      <Route path={'/signup'} element={<SignUpPage />} />
-      <Route path='/chrome' element={<Chrome />} />
-      <Route path='/android' element={<Android />} />
-      <Route path='/edge' element={<Edge />} />
-      <Route path='/firefox' element={<Firefox />} />
-      <Route path='/ios' element={<Ios />} />
-      <Route path='/linux' element={<Linux />} />
-      <Route path='/window' element={<Window />} />
-      <Route path='/mac' element={<Mac />} />
-      <Route path='/features' element={<Features />} />
-      <Route path='/downloding' element={<Downloding />} />
-      <Route path='*' element={<h1>404 page not found</h1>} />
-    </Routes>
-    
-    {/* <Stack mb={'40px'} >
+      <Routes>
+        <Route path={'/'} element={<LandingPage />} />
+        <Route path={'/login'} element={<LoginPage />} />
+        <Route path={'/signup'} element={<SignUpPage />} />
+        <Route path='/chrome' element={<Chrome />} />
+        <Route path='/android' element={<Android />} />
+        <Route path='/edge' element={<Edge />} />
+        <Route path='/firefox' element={<Firefox />} />
+        <Route path='/ios' element={<Ios />} />
+        <Route path='/linux' element={<Linux />} />
+        <Route path='/window' element={<Window />} />
+        <Route path='/mac' element={<Mac />} />
+        <Route path='/features' element={<Features />} />
+        <Route path='/downloding' element={<Downloding />} />
+        <Route path='*' element={<LandingPage />} />
+      </Routes>
+
+      {/* <Stack mb={'40px'} >
         <Footer />
       </Stack> */}
-    
+
     </div>
 
   )

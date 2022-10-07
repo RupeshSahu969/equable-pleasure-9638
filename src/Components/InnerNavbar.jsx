@@ -15,6 +15,11 @@ export const InnerNavbar = () => {
     const open = useSelector((state) => state.open)
     const auth = useSelector((state) => state.auth)
 
+    const data = useSelector(store => store);
+    const { name, email } = data;
+
+    // console.log(data)
+
 
     return (
         <>
@@ -29,7 +34,7 @@ export const InnerNavbar = () => {
                         </div>
                     </div>
                     <div>
-                        <div id="dropDownBtn">Bega95091's works...</div>
+                        <div id="dropDownBtn">{name}'s works...</div>
                         <div>
                             <button id='btnUpgrade'>UPGRADE</button>
                         </div>
@@ -42,16 +47,16 @@ export const InnerNavbar = () => {
                         <div>
                             {/* <div id='login'>BE</div> */}
                             <Menu>
-                                <MenuButton as={Box} className='login'>
-                                    be
+                                <MenuButton textTransform={"capitalize"} as={Box} className='login'>
+                                    {[email[0],email[1]].join("")}
                                 </MenuButton>
                                 <MenuList>
-                                    <Box m={'7px'} mt={'2px'} mb={'2px'} p={'5px'} fontSize={'14px'}>Bega95091</Box>
-                                    <Box m={'7px'} mt={'2px'} mb={'2px'} p={'5px'} fontSize={'12px'} color={'#7a7676'}>bega95091@gmail.com</Box>
+                                    <Box m={'7px'} mt={'2px'} mb={'2px'} p={'5px'} fontSize={'14px'}>{name}</Box>
+                                    <Box m={'7px'} mt={'2px'} mb={'2px'} p={'5px'} fontSize={'12px'} color={'#7a7676'}>{email}</Box>
                                     <MenuItem borderTop={'1px solid #C6D2D9'} className='loginList'>Profile settings</MenuItem>
                                     <MenuItem className='loginList'>Download apps</MenuItem>
                                     <MenuItem className='loginList' borderBottom={'1px solid #C6D2D9'} >Try chat app</MenuItem>
-                                    <MenuItem className='loginList' onClick={() => dispatch(authFun(!auth))}>Log out</MenuItem>
+                                    <MenuItem className='loginList' onClick={() => dispatch(authFun(!auth,"",""))}>Log out</MenuItem>
                                 </MenuList>
                             </Menu>
                         </div>
