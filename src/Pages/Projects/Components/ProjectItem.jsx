@@ -10,7 +10,7 @@ const ProjectItem = ({ name, client, tracked, amount, progress, access, color })
   return (
     <Box fontSize="14px" w="100%" color="#666666" >
       <HStack fontSize="12px" spacing="none" border="1px solid #c6d2d9" p="5px 10px" >
-        <Box h="20px" rounded="full" backgroundColor={color} w="20px" ></Box>
+        <Box h="20px" rounded="full" backgroundColor={color} w="8%" ></Box>
         <Box textTransform="capitalize" w="100%" p=" 5px 15px" >{name}</Box>
         {/* <Box borderLeft="1px solid #c6d2d9" w="100%" p=" 5px 15px" >{client.join(", ")}</Box> */}
         <Box borderLeft="1px solid #c6d2d9" w="100%" p=" 5px 15px" >
