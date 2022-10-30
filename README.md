@@ -21,10 +21,14 @@ Redux
 Browser LocalStorage for Frontend
 
 
-<h2>Login page /Signup page </h2>
+## Login Page
+![2022-10-30 (7)](https://user-images.githubusercontent.com/75201337/198878127-fdfff7cf-3a50-4d96-b7e4-2038943ab91f.png)
+
  create pages such as Sign in, Sign up, cart, and checkout page. The tech stacks that are used while building the pages were React, Redux, and . The Sign-in page and Signup page didn’t take long to get built because they  like creating input and appending the data to local storage. So, the flow of the website is like creating an account on the signup page and using the same data to login into the website.
  <br/>
- ![2022-10-30 (7)](https://user-images.githubusercontent.com/75201337/198878013-8d61f228-571d-4cf7-862d-545d60041421.png)
+ ## Signup Page
+ 
+![2022-10-30 (6)](https://user-images.githubusercontent.com/75201337/198878138-ac3e91e3-78b0-49f2-98c8-4876e1ea7dda.png)
 
  <br/>
  ![2022-10-30 (6)](https://user-images.githubusercontent.com/75201337/198878022-9bb96c00-218a-443c-a1dc-d9c18be6f25c.png)
