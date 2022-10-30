@@ -9,8 +9,11 @@ Clockify-Clockify is the most popular free time tracker and timesheet app for te
 
 <h3>Mohamed Haris</h3>
 
-<h2>Home page (Landing page )</h2>
+## HomePage
 
+![2022-10-30 (4)](https://user-images.githubusercontent.com/75201337/198877598-5de15538-24f1-4ff7-bc54-fb3484619268.png)
+
+<br/>
 HTML 
 CSS
 React
