@@ -31,7 +31,7 @@ Browser LocalStorage for Frontend
 ![2022-10-30 (6)](https://user-images.githubusercontent.com/75201337/198878138-ac3e91e3-78b0-49f2-98c8-4876e1ea7dda.png)
 
  <br/>
- ![2022-10-30 (6)](https://user-images.githubusercontent.com/75201337/198878022-9bb96c00-218a-443c-a1dc-d9c18be6f25c.png)
+ 
 
  
  Learnings -
