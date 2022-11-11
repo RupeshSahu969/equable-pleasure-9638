@@ -32,7 +32,7 @@ const Projects = () => {
 
     <>
       <Box bg="#f2f6f8" p="5% 2%" w="100%" h="100vh" >
-        <VStack>
+        <VStack >
           <Stack w="100%" p={"1% 0"} direction={{ base: "column", sm: "row" }} >
             <Center>
               <Text fontWeight={"semibold"} color={"#666"} size={"md"} >Projects</Text>
@@ -45,7 +45,7 @@ const Projects = () => {
             <Flex p="1rem" w="100%" h="50px" bg="#e4eaee" justifyContent="flex-start" alignItems="center" >
               <Text fontSize="12" >Projects</Text>
             </Flex>
-            <VStack spacing="none" w="100%"  >
+            <VStack bg="white" spacing="none" w="100%"  >
               {
                 projectArr.map((el) => {
                   return <ProjectItem key={el.name} {...el} />
@@ -117,8 +117,11 @@ const Projects = () => {
           <Divider />
           <ModalFooter>
             <Spacer />
-            <Button _hover={{ background: "white" }} fontWeight="medium" variant="ghost" color="#5cc7f8" onClick={onClose}>Cancel</Button>
-            <Button onClick={handleAddProj} _hover={{ background: "blue" }} borderRadius="2px" color="white" bg='#5cc7f8' mr={3}>
+            <Button _hover={{ background: "white" }} fontWeight="medium" variant="ghost" color="#5cc7f8">Cancel</Button>
+            <Button onClick={() => {
+              handleAddProj();
+              onClose();
+            }} _hover={{ background: "blue" }} borderRadius="2px" color="white" bg='#5cc7f8' mr={3}>
               ADD
             </Button>
           </ModalFooter>
