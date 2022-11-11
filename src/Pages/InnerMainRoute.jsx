@@ -24,6 +24,7 @@ export const InnerMainRoute = () => {
                         {/* <Route path='/reports' element={} /> */}
                         <Route path='/team' element={<Team />} />
                         <Route path='/projects' element={<Projects />} />
+                        <Route path={'*'} element={<Tracker />} />
                         {/* <Route path='*' element={<h1>404 page not found</h1>} /> */}
                     </Routes>
                 </div>
