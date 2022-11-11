@@ -63,7 +63,7 @@ export default function LoginPage() {
       }
       name[0] = name[0].toUpperCase();
       name = name.join("");
-      dispatch(authFun("tempToken", localEmail, name)).then(() => {
+      dispatch(authFun("tempToken", name, localEmail)).then(() => {
         navigate("/tracker");
       });
       toast({
