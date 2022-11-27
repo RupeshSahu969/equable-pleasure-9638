@@ -10,7 +10,7 @@ const TeamMember = ({ email, name }) => {
 
   const [rate, setRate] = useState(0);
   const [input, setInput] = useState(0)
-  console.log(rate)
+  // console.log(rate)
 
   const handleRateChange = (e) => {
     setRate(input);

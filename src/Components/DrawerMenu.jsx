@@ -13,7 +13,7 @@ import { InnerSidebarMini } from './InnerSidebarMini'
 
 export const DrawerMenu = () => {
     const open = useSelector((state) => state.open)
-    console.log('open:', open)
+    // console.log('open:', open)
 
     return (
         <>

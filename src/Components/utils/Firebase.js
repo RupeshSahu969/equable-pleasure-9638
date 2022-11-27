@@ -29,10 +29,10 @@ export const providers = new GoogleAuthProvider();
 
   signInWithPopup(isAuth, providers)
     .then((result) => {
-        console.log(result._tokenResponse)
-        console.log(result._tokenResponse.email)
-        console.log(result._tokenResponse.firstName)
-        console.log(result._tokenResponse.photoUrl)
+        // console.log(result._tokenResponse)
+        // console.log(result._tokenResponse.email)
+        // console.log(result._tokenResponse.firstName)
+        // console.log(result._tokenResponse.photoUrl)
         
        
         // window.location.href='http://localhost:3000'

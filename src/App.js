@@ -6,7 +6,7 @@ import MainRoute from './Pages/MainRoute';
 
 function App() {
   const auth = useSelector((state)=>state.auth)
-  console.log(auth)
+  // console.log(auth)
   return (
     <div>
       {

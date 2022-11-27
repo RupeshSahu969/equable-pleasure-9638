@@ -1,7 +1,7 @@
 import * as types from "./actionType"
 
 export const openFun = (token) => {
-    console.log('token:', token)
+    // console.log('token:', token)
     return { type: types.OPEN, payload: token }
 }
 
@@ -37,4 +37,11 @@ export const activeArrow = (token) => {
 }
 export const authFun = (token,name,email) => {
     return { type: types.AUTH, payload: {token,name,email} }
+}
+
+export const addActiveProject = (projexts) => {
+    console.log("in action",projexts)
+    return{
+        type:types.ADDPROJECTS,payload:projexts
+    }
 }

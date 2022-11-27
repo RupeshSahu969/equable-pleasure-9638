@@ -1,6 +1,8 @@
 import { Flex, HStack, Spacer, VStack } from "@chakra-ui/react";
 import React, { useEffect, useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
+import { addActiveProject } from "../../Components/Redux/action";
 import TrackerItem from "./TrackerItem";
 
 const fixTime = (time) => (time < 10 ? "0" + time : time);
@@ -11,12 +13,13 @@ const formatTimeToString = (time) => {
 };
 
 export const Tracker = () => {
+  const dispatch = useDispatch();
   const [show, setShow] = useState(false);
   const [count, setCount] = useState(0);
   const timerRef = useRef(null);
-  console.log(timerRef.current);
+//   console.log(timerRef.current);
 
-  console.log(formatTimeToString(count));
+//   console.log(formatTimeToString(count));
   const startTimer = () => {
     if (timerRef.current !== null) return;
     timerRef.current = setInterval(() => {
@@ -37,10 +40,13 @@ export const Tracker = () => {
 
   const [projName, setName] = useState("");
   const [projects, setProjects] = useState([]);
+
   // console.log(projName)
 
+  const store = useSelector(store => store);
   const handleAddProjectItem = () => {
-    console.log("in fn count", count);
+    console.log(store);
+    // console.log("in fn count", count);
     let currentTime = formatTimeToString(count);
     let item = {
       name: projName,
@@ -50,6 +56,7 @@ export const Tracker = () => {
     setName("");
     setCount(0);
     stopTimer();
+    dispatch(() => addActiveProject([...projects]));
   };
   // console.log(projects)
 

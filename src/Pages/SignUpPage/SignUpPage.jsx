@@ -65,10 +65,10 @@ export default function SignUpPage() {
     // const authing = isAuth 
     signInWithPopup(isAuth, providers)
       .then((result) => {
-        console.log(result._tokenResponse)
-        console.log(result._tokenResponse.email)
-        console.log(result._tokenResponse.firstName)
-        console.log(result._tokenResponse.photoUrl)
+        // console.log(result._tokenResponse)
+        // console.log(result._tokenResponse.email)
+        // console.log(result._tokenResponse.firstName)
+        // console.log(result._tokenResponse.photoUrl)
         dispatch(authFun(!auth))
 
 

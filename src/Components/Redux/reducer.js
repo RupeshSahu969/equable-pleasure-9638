@@ -14,7 +14,8 @@ const init = {
     arrow: false,
     auth: false,
     name: "",
-    email: ""
+    email: "",
+    activeProjects:[]
 }
 export const reducer = (state = init, { type, payload }) => {
     switch (type) {
@@ -107,6 +108,22 @@ export const reducer = (state = init, { type, payload }) => {
                 tags: false,
                 settings: false,
                 arrow: false
+            }
+        }
+        case types.ADDPROJECTS: {
+            return {
+                ...state,
+                tracker: false,
+                calendar: false,
+                dashboard: false,
+                reports: false,
+                projects: true,
+                team: false,
+                clients: false,
+                tags: false,
+                settings: false,
+                arrow: false,
+                activeProjects:[...payload]
             }
         }
         case types.TEAM: {

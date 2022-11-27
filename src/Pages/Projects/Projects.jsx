@@ -20,7 +20,7 @@ const Projects = () => {
   const initialRef = React.useRef(null)
   const finalRef = React.useRef(null)
 
-  console.log(newProj)
+  // console.log(newProj)
   const handleAddProj = (e) => {
 
     setArr([...projectArr, newProj]);

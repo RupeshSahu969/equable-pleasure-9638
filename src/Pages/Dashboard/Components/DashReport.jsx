@@ -4,6 +4,7 @@ import { Chart } from './Chart';
 import { DoughnutChart } from './DoughnutChart';
 
 const DashReport = () => {
+
   return (
     <div style={{ padding: "1%" }}  >
       <Stack direction={{ base: "column", md: "row" }}>
@@ -39,7 +40,7 @@ const DashReport = () => {
           </div>
           <VStack w="100%" >
             <div style={{ backgroundColor: "white", width: "100%", height: "500px", border: "1px solid #c6d2d9" }}>
-              <Chart />
+              <Chart/>
             </div>
             <Flex justifyContent="flex-start" >
               <DoughnutChart />
