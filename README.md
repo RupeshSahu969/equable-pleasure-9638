@@ -3,11 +3,13 @@ Clockify-Clockify is the most popular free time tracker and timesheet app for te
 <h3>Link</h3> https://timetracker-4jrwp56fe-rupeshsahu969.vercel.app/
 <h2>Team Members
 
-<h3>Ahsan</h3>
+<h3>Ahsan Beg</h3>
 
 <h3>Akshay Puranik</h3>
 
 <h3>Mohamed Haris</h3>
+
+<h3>Rupesh Sahu</h3>
 
 ## HomePage
 
